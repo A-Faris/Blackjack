@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export default function shuffle(array, seed = 1) {
   let currentIndex = array.length
   let temporaryValue, randomIndex
