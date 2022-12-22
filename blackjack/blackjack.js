@@ -10,7 +10,7 @@ const defaultLogger = await getDefaultLogger()
 export function generateDeck() {
   const cards = []
 
-  // TO DO: Write your deck generation code here
+  // TO DO: Write your code here
 
   return cards
 }
