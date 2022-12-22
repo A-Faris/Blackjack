@@ -1,0 +1,158 @@
+./blackjack/blackjack.js
+
+/home/runner/work/Coursework-Fundamentals-Week1/Coursework-Fundamentals-Week1/blackjack/blackjack.js
+  8:23  error  Parsing error: Cannot use keyword 'await' outside an async function
+
+✖ 1 problem (1 error, 0 warnings)
+
+./blackjack/support/shuffle.js
+
+/home/runner/work/Coursework-Fundamentals-Week1/Coursework-Fundamentals-Week1/blackjack/support/shuffle.js
+   2:34  error  Missing semicolon                                     semi
+   3:3   error  Split 'let' declarations into multiple statements     one-var
+   3:23  error  Expected variable declaration to be on a new line     one-var-declaration-per-line
+   3:34  error  Missing semicolon                                     semi
+   5:7   error  'random' is never reassigned. Use 'const' instead     prefer-const
+   6:5   error  Unexpected var, use let or const instead              no-var
+   6:22  error  Unary operator '++' used                              no-plusplus
+   6:22  error  Assignment to function parameter 'seed'               no-param-reassign
+   6:37  error  Missing semicolon                                     semi
+   7:29  error  Missing semicolon                                     semi
+   8:4   error  Missing semicolon                                     semi
+  10:10  error  Expected literal to be on the right side of !==       yoda
+  11:54  error  Missing semicolon                                     semi
+  12:22  error  Missing semicolon                                     semi
+  13:41  error  Missing semicolon                                     semi
+  14:5   error  Assignment to property of function parameter 'array'  no-param-reassign
+  14:45  error  Missing semicolon                                     semi
+  15:5   error  Assignment to property of function parameter 'array'  no-param-reassign
+  15:40  error  Missing semicolon                                     semi
+  17:15  error  Missing semicolon                                     semi
+
+✖ 20 problems (20 errors, 0 warnings)
+  16 errors and 0 warnings potentially fixable with the `--fix` option.
+
+./blackjack/support/testing.js
+
+/home/runner/work/Coursework-Fundamentals-Week1/Coursework-Fundamentals-Week1/blackjack/support/testing.js
+   1:42  error  Unexpected use of file extension "js" for "../blackjack.js"                                            import/extensions
+   1:59  error  Missing semicolon                                                                                      semi
+   2:1   error  `https://deno.land/x/mock@0.13.0/stub.ts` import should occur before import of `../blackjack.js`       import/order
+   2:22  error  Unable to resolve path to module 'https://deno.land/x/mock@0.13.0/stub.ts'                             import/no-unresolved
+   2:63  error  Missing semicolon                                                                                      semi
+   3:21  error  Unexpected use of file extension "js" for "./shuffle.js"                                               import/extensions
+   3:35  error  Missing semicolon                                                                                      semi
+   6:15  error  'window' is not defined                                                                                no-undef
+   6:34  error  'p' is defined but never used                                                                          no-unused-vars
+   6:40  error  Unexpected block statement surrounding arrow body; move the returned value immediately after the `=>`  arrow-body-style
+   7:27  error  Missing semicolon                                                                                      semi
+   8:5   error  Missing semicolon                                                                                      semi
+  12:15  error  Missing semicolon                                                                                      semi
+  15:30  error  Missing semicolon                                                                                      semi
+  17:45  error  Missing semicolon                                                                                      semi
+  20:7   error  'playerHand' is never reassigned. Use 'const' instead                                                  prefer-const
+  20:56  error  Missing semicolon                                                                                      semi
+  21:26  error  Missing semicolon                                                                                      semi
+  24:60  error  Missing semicolon                                                                                      semi
+
+✖ 19 problems (19 errors, 0 warnings)
+  14 errors and 0 warnings potentially fixable with the `--fix` option.
+
+./blackjack/blackjack_student_tests.js
+
+/home/runner/work/Coursework-Fundamentals-Week1/Coursework-Fundamentals-Week1/blackjack/blackjack_student_tests.js
+  1:30  error  Unable to resolve path to module 'https://deno.land/std/testing/asserts.ts'  import/no-unresolved
+  1:72  error  Missing semicolon                                                            semi
+  4:1   error  'Deno' is not defined                                                        no-undef
+  5:25  error  Missing semicolon                                                            semi
+  6:3   error  Missing semicolon                                                            semi
+
+✖ 5 problems (5 errors, 0 warnings)
+  3 errors and 0 warnings potentially fixable with the `--fix` option.
+
+./blackjack/blackjack_challenge_tests.js
+
+/home/runner/work/Coursework-Fundamentals-Week1/Coursework-Fundamentals-Week1/blackjack/blackjack_challenge_tests.js
+    5:22  error  Missing trailing comma                                                       comma-dangle
+    6:8   error  Unable to resolve path to module 'https://deno.land/std/testing/asserts.ts'  import/no-unresolved
+    6:50  error  Missing semicolon                                                            semi
+    7:47  error  Unexpected use of file extension "js" for "./blackjack.js"                   import/extensions
+    7:63  error  Missing semicolon                                                            semi
+    9:53  error  Missing semicolon                                                            semi
+   10:47  error  Unexpected use of file extension "js" for "./support/testing.js"             import/extensions
+   10:69  error  Missing semicolon                                                            semi
+   12:1   error  'Deno' is not defined                                                        no-undef
+   66:9   error  Missing trailing comma                                                       comma-dangle
+   67:5   error  Missing semicolon                                                            semi
+   68:3   error  Missing semicolon                                                            semi
+   70:1   error  'Deno' is not defined                                                        no-undef
+   73:35  error  Missing semicolon                                                            semi
+   74:4   error  Missing trailing comma                                                       comma-dangle
+   75:2   error  Missing semicolon                                                            semi
+   77:1   error  'Deno' is not defined                                                        no-undef
+   80:45  error  Missing semicolon                                                            semi
+   81:4   error  Missing trailing comma                                                       comma-dangle
+   82:2   error  Missing semicolon                                                            semi
+   84:1   error  'Deno' is not defined                                                        no-undef
+   87:64  error  Missing semicolon                                                            semi
+   88:4   error  Missing trailing comma                                                       comma-dangle
+   89:2   error  Missing semicolon                                                            semi
+   91:1   error  'Deno' is not defined                                                        no-undef
+   94:46  error  Missing semicolon                                                            semi
+   95:4   error  Missing trailing comma                                                       comma-dangle
+   96:2   error  Missing semicolon                                                            semi
+   98:1   error  'Deno' is not defined                                                        no-undef
+  101:52  error  Missing semicolon                                                            semi
+  102:4   error  Missing trailing comma                                                       comma-dangle
+  103:2   error  Missing semicolon                                                            semi
+  105:1   error  'Deno' is not defined                                                        no-undef
+  108:54  error  Missing semicolon                                                            semi
+  109:46  error  Missing semicolon                                                            semi
+  111:31  error  Missing semicolon                                                            semi
+  112:55  error  Missing semicolon                                                            semi
+  113:16  error  Missing semicolon                                                            semi
+  114:4   error  Missing trailing comma                                                       comma-dangle
+  115:2   error  Missing semicolon                                                            semi
+  117:1   error  'Deno' is not defined                                                        no-undef
+  118:52  error  Missing semicolon                                                            semi
+  119:44  error  Missing semicolon                                                            semi
+  121:29  error  Missing semicolon                                                            semi
+  122:80  error  Missing semicolon                                                            semi
+  125:22  error  Missing semicolon                                                            semi
+  128:63  error  Missing semicolon                                                            semi
+  129:14  error  Missing semicolon                                                            semi
+  130:3   error  Missing semicolon                                                            semi
+  132:1   error  'Deno' is not defined                                                        no-undef
+  135:54  error  Missing semicolon                                                            semi
+  136:46  error  Missing semicolon                                                            semi
+  138:31  error  Missing semicolon                                                            semi
+  140:7   error  Expected no linebreak before this expression                                 implicit-arrow-linebreak
+  140:35  error  Missing trailing comma                                                       comma-dangle
+  141:5   error  Unexpected newline before ')'                                                function-paren-newline
+  141:6   error  Missing semicolon                                                            semi
+  144:24  error  Missing semicolon                                                            semi
+  147:53  error  Missing semicolon                                                            semi
+  148:16  error  Missing semicolon                                                            semi
+  149:4   error  Missing trailing comma                                                       comma-dangle
+  150:2   error  Missing semicolon                                                            semi
+  152:1   error  'Deno' is not defined                                                        no-undef
+  155:21  error  'handler' is assigned a value but never used                                 no-unused-vars
+  155:54  error  Missing semicolon                                                            semi
+  156:37  error  Missing semicolon                                                            semi
+  158:52  error  Missing semicolon                                                            semi
+  160:36  error  Missing semicolon                                                            semi
+  161:16  error  Missing semicolon                                                            semi
+  162:4   error  Missing trailing comma                                                       comma-dangle
+  163:2   error  Missing semicolon                                                            semi
+  165:1   error  'Deno' is not defined                                                        no-undef
+  168:54  error  Missing semicolon                                                            semi
+  169:37  error  Missing semicolon                                                            semi
+  171:42  error  Missing semicolon                                                            semi
+  172:57  error  Missing semicolon                                                            semi
+  173:16  error  Missing semicolon                                                            semi
+  174:4   error  Missing trailing comma                                                       comma-dangle
+  175:2   error  Missing semicolon                                                            semi
+
+✖ 79 problems (79 errors, 0 warnings)
+  64 errors and 0 warnings potentially fixable with the `--fix` option.
+
