@@ -15,39 +15,3 @@
 
 ✖ 2 problems (2 errors, 0 warnings)
 
-./blackjack/blackjack_challenge_tests.js
-
-/home/runner/work/Coursework-Fundamentals-Week1/Coursework-Fundamentals-Week1/blackjack/blackjack_challenge_tests.js
-    5:22  error  Missing trailing comma                                                       comma-dangle
-    6:8   error  Unable to resolve path to module 'https://deno.land/std/testing/asserts.ts'  import/no-unresolved
-    7:47  error  Unexpected use of file extension "js" for "./blackjack.js"                   import/extensions
-   10:47  error  Unexpected use of file extension "js" for "./support/testing.js"             import/extensions
-   12:1   error  'Deno' is not defined                                                        no-undef
-   66:9   error  Missing trailing comma                                                       comma-dangle
-   70:1   error  'Deno' is not defined                                                        no-undef
-   74:4   error  Missing trailing comma                                                       comma-dangle
-   77:1   error  'Deno' is not defined                                                        no-undef
-   81:4   error  Missing trailing comma                                                       comma-dangle
-   84:1   error  'Deno' is not defined                                                        no-undef
-   88:4   error  Missing trailing comma                                                       comma-dangle
-   91:1   error  'Deno' is not defined                                                        no-undef
-   95:4   error  Missing trailing comma                                                       comma-dangle
-   98:1   error  'Deno' is not defined                                                        no-undef
-  102:4   error  Missing trailing comma                                                       comma-dangle
-  105:1   error  'Deno' is not defined                                                        no-undef
-  114:4   error  Missing trailing comma                                                       comma-dangle
-  117:1   error  'Deno' is not defined                                                        no-undef
-  132:1   error  'Deno' is not defined                                                        no-undef
-  140:7   error  Expected no linebreak before this expression                                 implicit-arrow-linebreak
-  140:35  error  Missing trailing comma                                                       comma-dangle
-  141:5   error  Unexpected newline before ')'                                                function-paren-newline
-  149:4   error  Missing trailing comma                                                       comma-dangle
-  152:1   error  'Deno' is not defined                                                        no-undef
-  155:21  error  'handler' is assigned a value but never used                                 no-unused-vars
-  162:4   error  Missing trailing comma                                                       comma-dangle
-  165:1   error  'Deno' is not defined                                                        no-undef
-  174:4   error  Missing trailing comma                                                       comma-dangle
-
-✖ 29 problems (29 errors, 0 warnings)
-  14 errors and 0 warnings potentially fixable with the `--fix` option.
-
