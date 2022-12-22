@@ -7,11 +7,13 @@
 
 ./blackjack/support/shuffle.js
 ./blackjack/support/testing.js
-./blackjack/blackjack_student_tests.js
+./test.js
 
-/home/runner/work/Coursework-Fundamentals-Week1/Coursework-Fundamentals-Week1/blackjack/blackjack_student_tests.js
-  1:30  error  Unable to resolve path to module 'https://deno.land/std/testing/asserts.ts'  import/no-unresolved
-  4:1   error  'Deno' is not defined                                                        no-undef
+/home/runner/work/Coursework-Fundamentals-Week1/Coursework-Fundamentals-Week1/test.js
+  1:5   error  'k' is never reassigned. Use 'const' instead   prefer-const
+  1:5   error  'k' is assigned a value but never used         no-unused-vars
+  1:11  error  Newline required at end of file but not found  eol-last
 
-✖ 2 problems (2 errors, 0 warnings)
+✖ 3 problems (3 errors, 0 warnings)
+  2 errors and 0 warnings potentially fixable with the `--fix` option.
 

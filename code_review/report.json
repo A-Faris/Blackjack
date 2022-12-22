@@ -18,10 +18,11 @@
    "score": 100.0
   },
   {
-   "file_name": "./blackjack/blackjack_student_tests.js",
+   "file_name": "./test.js",
    "errors": [
-    "1:30  error  Unable to resolve path to module 'https://deno.land/std/testing/asserts.ts'  import/no-unresolved",
-    "4:1   error  'Deno' is not defined                                                        no-undef"
+    "1:5   error  'k' is never reassigned. Use 'const' instead   prefer-const",
+    "1:5   error  'k' is assigned a value but never used         no-unused-vars",
+    "1:11  error  Newline required at end of file but not found  eol-last"
    ],
    "score": 0
   }
