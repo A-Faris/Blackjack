@@ -3,9 +3,16 @@
   {
    "file_name": "./blackjack/blackjack.js",
    "errors": [
-    "10:23  error  Parsing error: Cannot use keyword 'await' outside an async function"
+    "7:7   error    'LOSE_MESSAGE' is assigned a value but never used               no-unused-vars",
+    "8:7   error    'WIN_MESSAGE' is assigned a value but never used                no-unused-vars",
+    "9:7   error    'DRAW_MESSAGE' is assigned a value but never used               no-unused-vars",
+    "20:27  error    'cards' is defined but never used                               no-unused-vars",
+    "24:17  error    Expected to return a value at the end of function 'playerTurn'  consistent-return",
+    "27:3   error    Expected exception block, space or tab after '//' in comment    spaced-comment",
+    "28:18  warning  Unexpected prompt                                               no-alert",
+    "51:7   error    'playerHand' is never reassigned. Use 'const' instead           prefer-const"
    ],
-   "score": 90.2
+   "score": 29.4
   },
   {
    "file_name": "./blackjack/support/shuffle.js",
@@ -18,5 +25,5 @@
    "score": 100.0
   }
  ],
- "average_score": 96.7
+ "average_score": 76.5
 }

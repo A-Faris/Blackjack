@@ -1,9 +1,17 @@
 ./blackjack/blackjack.js
 
 /home/runner/work/Coursework-Fundamentals-Week1/Coursework-Fundamentals-Week1/blackjack/blackjack.js
-  10:23  error  Parsing error: Cannot use keyword 'await' outside an async function
+   7:7   error    'LOSE_MESSAGE' is assigned a value but never used               no-unused-vars
+   8:7   error    'WIN_MESSAGE' is assigned a value but never used                no-unused-vars
+   9:7   error    'DRAW_MESSAGE' is assigned a value but never used               no-unused-vars
+  20:27  error    'cards' is defined but never used                               no-unused-vars
+  24:17  error    Expected to return a value at the end of function 'playerTurn'  consistent-return
+  27:3   error    Expected exception block, space or tab after '//' in comment    spaced-comment
+  28:18  warning  Unexpected prompt                                               no-alert
+  51:7   error    'playerHand' is never reassigned. Use 'const' instead           prefer-const
 
-✖ 1 problem (1 error, 0 warnings)
+✖ 8 problems (7 errors, 1 warning)
+  2 errors and 0 warnings potentially fixable with the `--fix` option.
 
 ./blackjack/support/shuffle.js
 ./blackjack/support/testing.js
