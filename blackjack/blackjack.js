@@ -24,7 +24,7 @@ export function pointsFor(cards) {
 export function playerTurn(deck, hand, logger = defaultLogger) {
   logger.info(`Your hand is ${hand.join(', ')}\n(${pointsFor(hand)} points)`)
 
-  //Accept the choice from the player
+  //Accept the choice from the player 
   const action = window.prompt('What do you want to do? ("hit" or "stick")')
 
   switch (action) {
