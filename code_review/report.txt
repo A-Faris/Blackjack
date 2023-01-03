@@ -1,9 +1,0 @@
-./blackjack/blackjack.js
-
-/home/runner/work/Coursework-Fundamentals-Week1/Coursework-Fundamentals-Week1/blackjack/blackjack.js
-  8:23  error  Parsing error: Cannot use keyword 'await' outside an async function
-
-✖ 1 problem (1 error, 0 warnings)
-
-./blackjack/support/shuffle.js
-./blackjack/support/testing.js
