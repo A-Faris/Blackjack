@@ -7,11 +7,12 @@
   20:27  error    'cards' is defined but never used                               no-unused-vars
   24:17  error    Expected to return a value at the end of function 'playerTurn'  consistent-return
   27:3   error    Expected exception block, space or tab after '//' in comment    spaced-comment
+  27:38  error    Trailing spaces not allowed                                     no-trailing-spaces
   28:18  warning  Unexpected prompt                                               no-alert
   51:7   error    'playerHand' is never reassigned. Use 'const' instead           prefer-const
 
-✖ 8 problems (7 errors, 1 warning)
-  2 errors and 0 warnings potentially fixable with the `--fix` option.
+✖ 9 problems (8 errors, 1 warning)
+  3 errors and 0 warnings potentially fixable with the `--fix` option.
 
 ./blackjack/support/shuffle.js
 ./blackjack/support/testing.js
