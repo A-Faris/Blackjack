@@ -1,6 +1,8 @@
+/* eslint-disable */
 import shuffle from './support/shuffle.js'
 import { getDefaultLogger } from './support/logging.ts'
 import { parse } from 'https://deno.land/std/flags/mod.ts'
+/* eslint-enable */
 
 const LOSE_MESSAGE = 'You lose!'
 const WIN_MESSAGE = 'You win!'
