@@ -82,7 +82,7 @@ def test_points_five_cards():
 def test_points_two_aces():
     '''pointsFor() calculates the correct amount of points when there are only two aces'''
 
-    assert points_for(['AD', 'AC']) == 36
+    assert points_for(['AD', 'AC']) == 21
 
 
 def test_points_two_aces_plus_one():
@@ -102,7 +102,7 @@ def test_player_turn_output_hitting(monkeypatch):
 
     printed_lines = captured_output.getvalue().split("\n")
 
-    assert "Hitting" in printed_lines == True
+    assert "Hitting" in printed_lines
 
     clean_up()
 
@@ -152,10 +152,10 @@ def test_player_choosing_hit_updates_points(monkeypatch):
 
     captured_output = capture_print_lines()
 
-    play(1595870164262)
+    play(seed=1595870164262)
 
     printed_lines = captured_output.getvalue().split("\n")
 
-    assert "'You lose!'" in printed_lines
+    assert "You lose!" in printed_lines
 
     clean_up()
