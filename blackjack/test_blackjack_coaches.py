@@ -1,5 +1,9 @@
 from blackjack import generate_deck, points_for, play
-from support.testing_util import player_chooses, clean_up, capture_print_lines, take_player_turn
+from support.testing_util import player_chooses, reset_test_suite, capture_print_lines
+
+"""
+Testing Generate Deck
+"""
 
 
 def test_generate_deck():
@@ -61,6 +65,11 @@ def test_generate_deck():
     assert generate_deck() == completeDeck
 
 
+"""
+Testing points_for
+"""
+
+
 def test_points_for_empty():
     '''pointsFor() calculates the correct amount of points when no cards are present'''
 
@@ -91,20 +100,31 @@ def test_points_two_aces_plus_one():
     assert points_for(['2D', 'AD', 'AC']) == 24
 
 
+"""
+Testing gameplay
+"""
+
+
 def test_player_turn_output_hitting(monkeypatch):
     '''playerTurn(): choosing to hit outputs a "Hitting" message'''
 
+    # The choices that a player will make during the game
     player_chooses(["hit", "stick"], monkeypatch)
 
+    # A tool to capture all of the lines printed in the game
     captured_output = capture_print_lines()
 
-    take_player_turn(3131)
+    # Start our game with the given seed
+    play(389813913)
 
+    # Split the messages received into a list of individual lines
     printed_lines = captured_output.getvalue().split("\n")
 
-    assert "Hitting" in printed_lines
+    # Reset the test suite ready for the next test
+    reset_test_suite()
 
-    clean_up()
+    # Check that the word Hitting is in the list
+    assert "Hitting" in printed_lines
 
 
 def test_player_choosing_hit_updates_hand(monkeypatch):
@@ -114,16 +134,16 @@ def test_player_choosing_hit_updates_hand(monkeypatch):
 
     captured_output = capture_print_lines()
 
-    take_player_turn()
+    play(389813913)
 
     printed_lines = captured_output.getvalue().split("\n")
     printed_lines = list(
         filter(lambda m: (m.startswith('Your hand is')), printed_lines))
 
-    assert printed_lines[1] != None
-    assert "Your hand is AS, 2S, 3S" in printed_lines[1]
+    reset_test_suite()
 
-    clean_up()
+    assert printed_lines[1] != None
+    assert "Your hand is 9S, KS, 9H" in printed_lines[1]
 
 
 def test_player_choosing_hit_updates_points(monkeypatch):
@@ -133,16 +153,17 @@ def test_player_choosing_hit_updates_points(monkeypatch):
 
     captured_output = capture_print_lines()
 
-    take_player_turn()
+    play(313131)
 
     printed_lines = captured_output.getvalue().split("\n")
+    print(printed_lines)
     printed_lines = list(
         filter(lambda m: (m.startswith('Your hand is')), printed_lines))
 
-    assert printed_lines[1] != None
-    assert "(16 points)" in printed_lines[1]
+    reset_test_suite()
 
-    clean_up()
+    assert printed_lines[1] != None
+    assert "(14 points)" in printed_lines[1]
 
 
 def test_player_choosing_hit_updates_points(monkeypatch):
@@ -156,6 +177,6 @@ def test_player_choosing_hit_updates_points(monkeypatch):
 
     printed_lines = captured_output.getvalue().split("\n")
 
-    assert "You lose!" in printed_lines
+    reset_test_suite()
 
-    clean_up()
+    assert "You lose!" in printed_lines
