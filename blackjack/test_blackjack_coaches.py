@@ -115,6 +115,7 @@ def test_player_turn_output_hitting(monkeypatch):
     captured_output = capture_print_lines()
 
     # Start our game with the given seed
+    # All printed lines will be stored inside captured_output in a single string
     play(389813913)
 
     # Split the messages received into a list of individual lines
