@@ -1,9 +1,8 @@
 import sys
 from io import StringIO
-from typing import List
 
 
-def player_chooses(choices: List[str], monkeypatch) -> None:
+def player_chooses(choices: list, monkeypatch) -> None:
     """
     Take a list of choices and uses them to feed into the game to test with
 
