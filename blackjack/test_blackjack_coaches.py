@@ -71,31 +71,31 @@ Testing points_for
 
 
 def test_points_for_empty():
-    '''points_for() calculates the correct amount of points when no cards are present'''
+    """points_for() calculates the correct amount of points when no cards are present"""
 
     assert points_for([]) == 0
 
 
 def test_points_for_two_cards():
-    ''''points_for() calculates the correct amount of points when only number cards are used'''
+    """points_for() calculates the correct amount of points when only number cards are used"""
 
     assert points_for(['7H', '2D']) == 9
 
 
 def test_points_five_cards():
-    '''points_for() calculates the correct amount of points when only number and face cards are used'''
+    """points_for() calculates the correct amount of points when only number and face cards are used"""
 
     assert points_for(['3D', 'JC', 'QH', '2H', 'AC']) == 36
 
 
 def test_points_two_aces():
-    '''points_for() calculates the correct amount of points when there are only two aces'''
+    """points_for() calculates the correct amount of points when there are only two aces"""
 
     assert points_for(['AD', 'AC']) == 21
 
 
 def test_points_two_aces_plus_one():
-    '''points_for() calculates the correct amount of points when there are two aces and another card'''
+    """points_for() calculates the correct amount of points when there are two aces and another card"""
 
     assert points_for(['2D', 'AD', 'AC']) == 24
 
@@ -106,7 +106,7 @@ Testing gameplay
 
 
 def test_player_turn_output_hitting(monkeypatch):
-    '''player_turn(): choosing to hit outputs a "Hitting" message'''
+    """player_turn(): choosing to hit outputs a "Hitting" message"""
 
     # The choices that a player will make during the game
     player_chooses(["hit", "stick"], monkeypatch)
@@ -129,7 +129,7 @@ def test_player_turn_output_hitting(monkeypatch):
 
 
 def test_player_choosing_hit_updates_hand(monkeypatch):
-    '''player_turn(): choosing to hit shows an updated hand'''
+    """player_turn(): choosing to hit shows an updated hand"""
 
     player_chooses(["hit", "stick"], monkeypatch)
 
@@ -148,7 +148,7 @@ def test_player_choosing_hit_updates_hand(monkeypatch):
 
 
 def test_player_choosing_hit_updates_points(monkeypatch):
-    '''player_turn(): choosing to hit shows an updated point total'''
+    """player_turn(): choosing to hit shows an updated point total"""
 
     player_chooses(["hit", "stick"], monkeypatch)
 
@@ -168,7 +168,7 @@ def test_player_choosing_hit_updates_points(monkeypatch):
 
 
 def test_player_choosing_hit_updates_points(monkeypatch):
-    '''player_turn(): hitting and busting displays a 'you lose' message'''
+    """player_turn(): hitting and busting displays a 'you lose' message"""
 
     player_chooses(["hit"], monkeypatch)
 
