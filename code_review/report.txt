@@ -1,18 +1,59 @@
-./blackjack/blackjack.js
+./blackjack/test_blackjack_trainees.py
+************* Module test_blackjack_trainees
+blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'generate_deck' (unused-variable)
+blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'points_for' (unused-variable)
+blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'play' (unused-variable)
+blackjack/test_blackjack_trainees.py:2:0: W0612: Unused variable 'player_chooses' (unused-variable)
+blackjack/test_blackjack_trainees.py:2:0: W0612: Unused variable 'reset_test_suite' (unused-variable)
+blackjack/test_blackjack_trainees.py:2:0: W0612: Unused variable 'capture_print_lines' (unused-variable)
+blackjack/test_blackjack_trainees.py:1:0: W0611: Unused generate_deck imported from blackjack (unused-import)
+blackjack/test_blackjack_trainees.py:1:0: W0611: Unused points_for imported from blackjack (unused-import)
+blackjack/test_blackjack_trainees.py:1:0: W0611: Unused play imported from blackjack (unused-import)
+blackjack/test_blackjack_trainees.py:2:0: W0611: Unused player_chooses imported from support.testing_util (unused-import)
+blackjack/test_blackjack_trainees.py:2:0: W0611: Unused reset_test_suite imported from support.testing_util (unused-import)
+blackjack/test_blackjack_trainees.py:2:0: W0611: Unused capture_print_lines imported from support.testing_util (unused-import)
 
-/home/runner/work/Coursework-Fundamentals-Week1/Coursework-Fundamentals-Week1/blackjack/blackjack.js
-   7:7   error    'LOSE_MESSAGE' is assigned a value but never used               no-unused-vars
-   8:7   error    'WIN_MESSAGE' is assigned a value but never used                no-unused-vars
-   9:7   error    'DRAW_MESSAGE' is assigned a value but never used               no-unused-vars
-  20:27  error    'cards' is defined but never used                               no-unused-vars
-  24:17  error    Expected to return a value at the end of function 'playerTurn'  consistent-return
-  27:3   error    Expected exception block, space or tab after '//' in comment    spaced-comment
-  27:38  error    Trailing spaces not allowed                                     no-trailing-spaces
-  28:18  warning  Unexpected prompt                                               no-alert
-  51:7   error    'playerHand' is never reassigned. Use 'const' instead           prefer-const
+-----------------------------------
+Your code has been rated at 0.00/10
 
-✖ 9 problems (8 errors, 1 warning)
-  3 errors and 0 warnings potentially fixable with the `--fix` option.
+./blackjack/blackjack.py
+************* Module blackjack
+blackjack/blackjack.py:26:15: W0613: Unused argument 'cards' (unused-argument)
+blackjack/blackjack.py:45:4: R1705: Unnecessary "elif" after "return", remove the leading "el" from "elif" (no-else-return)
+blackjack/blackjack.py:34:16: W0613: Unused argument 'deck' (unused-argument)
+blackjack/blackjack.py:5:0: W0612: Unused variable 'LOSE_MESSAGE' (unused-variable)
+blackjack/blackjack.py:6:0: W0612: Unused variable 'WIN_MESSAGE' (unused-variable)
+blackjack/blackjack.py:7:0: W0612: Unused variable 'DRAW_MESSAGE' (unused-variable)
 
-./blackjack/support/shuffle.js
-./blackjack/support/testing.js
+-----------------------------------
+Your code has been rated at 8.54/10
+
+./blackjack/support/testing_util.py
+************* Module testing_util
+blackjack/support/testing_util.py:5:0: W0612: Unused variable 'player_chooses' (unused-variable)
+blackjack/support/testing_util.py:18:0: W0612: Unused variable 'reset_test_suite' (unused-variable)
+blackjack/support/testing_util.py:26:0: W0612: Unused variable 'capture_print_lines' (unused-variable)
+
+-----------------------------------
+Your code has been rated at 7.27/10
+
+./blackjack/test_blackjack_coaches.py
+************* Module test_blackjack_coaches
+blackjack/test_blackjack_coaches.py:146:11: C0121: Comparison 'printed_lines[1] != None' should be 'printed_lines[1] is not None' (singleton-comparison)
+blackjack/test_blackjack_coaches.py:166:11: C0121: Comparison 'printed_lines[1] != None' should be 'printed_lines[1] is not None' (singleton-comparison)
+blackjack/test_blackjack_coaches.py:170:0: E0102: function already defined line 150 (function-redefined)
+blackjack/test_blackjack_coaches.py:10:4: C0103: Variable name "completeDeck" doesn't conform to the `snake_case` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
+blackjack/test_blackjack_coaches.py:9:0: W0612: Unused variable 'test_generate_deck' (unused-variable)
+blackjack/test_blackjack_coaches.py:73:0: W0612: Unused variable 'test_points_for_empty' (unused-variable)
+blackjack/test_blackjack_coaches.py:79:0: W0612: Unused variable 'test_points_for_two_cards' (unused-variable)
+blackjack/test_blackjack_coaches.py:85:0: W0612: Unused variable 'test_points_five_cards' (unused-variable)
+blackjack/test_blackjack_coaches.py:91:0: W0612: Unused variable 'test_points_two_aces' (unused-variable)
+blackjack/test_blackjack_coaches.py:97:0: W0612: Unused variable 'test_points_two_aces_plus_one' (unused-variable)
+blackjack/test_blackjack_coaches.py:108:0: W0612: Unused variable 'test_player_turn_output_hitting' (unused-variable)
+blackjack/test_blackjack_coaches.py:131:0: W0612: Unused variable 'test_player_choosing_hit_updates_hand' (unused-variable)
+blackjack/test_blackjack_coaches.py:150:0: W0612: Unused variable 'test_player_choosing_hit_updates_points' (unused-variable)
+blackjack/test_blackjack_coaches.py:170:0: W0612: Unused variable 'test_player_choosing_hit_updates_points' (unused-variable)
+
+-----------------------------------
+Your code has been rated at 6.47/10
+
