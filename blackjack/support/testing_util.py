@@ -1,3 +1,5 @@
+# pylint: skip-file
+
 import sys
 from io import StringIO
 
