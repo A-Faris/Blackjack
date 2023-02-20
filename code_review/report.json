@@ -1,7 +1,7 @@
 {
  "files": [
   {
-   "file_name": "./blackjack/test_blackjack_trainees.py",
+   "file_name": "./blackjack/test_blackjack_coaches.py",
    "errors": [
     "blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'generate_deck' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'points_for' (unused-variable)",
@@ -19,7 +19,7 @@
    "score": 0.0
   },
   {
-   "file_name": "./blackjack/blackjack.py",
+   "file_name": "./blackjack/support/testing_util.py",
    "errors": [
     "blackjack/blackjack.py:26:15: W0613: Unused argument 'cards' (unused-argument)",
     "blackjack/blackjack.py:45:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)",
@@ -29,36 +29,7 @@
     "blackjack/blackjack.py:7:0: W0612: Unused variable 'DRAW_MESSAGE' (unused-variable)"
    ],
    "score": 85.4
-  },
-  {
-   "file_name": "./blackjack/support/testing_util.py",
-   "errors": [
-    "blackjack/support/testing_util.py:5:0: W0612: Unused variable 'player_chooses' (unused-variable)",
-    "blackjack/support/testing_util.py:18:0: W0612: Unused variable 'reset_test_suite' (unused-variable)",
-    "blackjack/support/testing_util.py:26:0: W0612: Unused variable 'capture_print_lines' (unused-variable)"
-   ],
-   "score": 72.7
-  },
-  {
-   "file_name": "./blackjack/test_blackjack_coaches.py",
-   "errors": [
-    "blackjack/test_blackjack_coaches.py:146:11: C0121: Comparison 'printed_lines[1] != None' should be 'printed_lines[1] is not None' (singleton-comparison)",
-    "blackjack/test_blackjack_coaches.py:166:11: C0121: Comparison 'printed_lines[1] != None' should be 'printed_lines[1] is not None' (singleton-comparison)",
-    "blackjack/test_blackjack_coaches.py:170:0: E0102: function already defined line 150 (function-redefined)",
-    "blackjack/test_blackjack_coaches.py:10:4: C0103: Variable name \"completeDeck\" doesn't conform to the `snake_case` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
-    "blackjack/test_blackjack_coaches.py:9:0: W0612: Unused variable 'test_generate_deck' (unused-variable)",
-    "blackjack/test_blackjack_coaches.py:73:0: W0612: Unused variable 'test_points_for_empty' (unused-variable)",
-    "blackjack/test_blackjack_coaches.py:79:0: W0612: Unused variable 'test_points_for_two_cards' (unused-variable)",
-    "blackjack/test_blackjack_coaches.py:85:0: W0612: Unused variable 'test_points_five_cards' (unused-variable)",
-    "blackjack/test_blackjack_coaches.py:91:0: W0612: Unused variable 'test_points_two_aces' (unused-variable)",
-    "blackjack/test_blackjack_coaches.py:97:0: W0612: Unused variable 'test_points_two_aces_plus_one' (unused-variable)",
-    "blackjack/test_blackjack_coaches.py:108:0: W0612: Unused variable 'test_player_turn_output_hitting' (unused-variable)",
-    "blackjack/test_blackjack_coaches.py:131:0: W0612: Unused variable 'test_player_choosing_hit_updates_hand' (unused-variable)",
-    "blackjack/test_blackjack_coaches.py:150:0: W0612: Unused variable 'test_player_choosing_hit_updates_points' (unused-variable)",
-    "blackjack/test_blackjack_coaches.py:170:0: W0612: Unused variable 'test_player_choosing_hit_updates_points' (unused-variable)"
-   ],
-   "score": 64.7
   }
  ],
- "average_score": 55.7
+ "average_score": 42.7
 }
