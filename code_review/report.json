@@ -1,8 +1,10 @@
 {
  "files": [
   {
-   "file_name": "./blackjack/test_blackjack_coaches.py",
+   "file_name": "./blackjack/test_blackjack_trainees.py",
    "errors": [
+    "blackjack/test_blackjack_trainees.py:2:0: E0611: No name 'reset_test_suite' in module 'support.testing_util' (no-name-in-module)",
+    "blackjack/test_blackjack_trainees.py:2:0: E0611: No name 'capture_print_lines' in module 'support.testing_util' (no-name-in-module)",
     "blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'generate_deck' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'points_for' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'play' (unused-variable)",
@@ -19,7 +21,7 @@
    "score": 0.0
   },
   {
-   "file_name": "./blackjack/support/testing_util.py",
+   "file_name": "./blackjack/test_blackjack_coaches.py",
    "errors": [
     "blackjack/blackjack.py:26:15: W0613: Unused argument 'cards' (unused-argument)",
     "blackjack/blackjack.py:45:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)",

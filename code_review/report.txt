@@ -1,6 +1,7 @@
-./blackjack/test_blackjack_coaches.py
 ./blackjack/test_blackjack_trainees.py
 ************* Module test_blackjack_trainees
+blackjack/test_blackjack_trainees.py:2:0: E0611: No name 'reset_test_suite' in module 'support.testing_util' (no-name-in-module)
+blackjack/test_blackjack_trainees.py:2:0: E0611: No name 'capture_print_lines' in module 'support.testing_util' (no-name-in-module)
 blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'generate_deck' (unused-variable)
 blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'points_for' (unused-variable)
 blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'play' (unused-variable)
@@ -17,7 +18,7 @@ blackjack/test_blackjack_trainees.py:2:0: W0611: Unused capture_print_lines impo
 -----------------------------------
 Your code has been rated at 0.00/10
 
-./blackjack/support/testing_util.py
+./blackjack/test_blackjack_coaches.py
 ./blackjack/blackjack.py
 ************* Module blackjack
 blackjack/blackjack.py:26:15: W0613: Unused argument 'cards' (unused-argument)
@@ -30,3 +31,4 @@ blackjack/blackjack.py:7:0: W0612: Unused variable 'DRAW_MESSAGE' (unused-variab
 -----------------------------------
 Your code has been rated at 8.54/10
 
+./blackjack/support/testing_util.py
