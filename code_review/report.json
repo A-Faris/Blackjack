@@ -3,20 +3,14 @@
   {
    "file_name": "./blackjack/test_blackjack_trainees.py",
    "errors": [
-    "blackjack/test_blackjack_trainees.py:2:0: E0611: No name 'reset_test_suite' in module 'support.testing_util' (no-name-in-module)",
-    "blackjack/test_blackjack_trainees.py:2:0: E0611: No name 'capture_print_lines' in module 'support.testing_util' (no-name-in-module)",
     "blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'generate_deck' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'points_for' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:1:0: W0612: Unused variable 'play' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:2:0: W0612: Unused variable 'player_chooses' (unused-variable)",
-    "blackjack/test_blackjack_trainees.py:2:0: W0612: Unused variable 'reset_test_suite' (unused-variable)",
-    "blackjack/test_blackjack_trainees.py:2:0: W0612: Unused variable 'capture_print_lines' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:1:0: W0611: Unused generate_deck imported from blackjack (unused-import)",
     "blackjack/test_blackjack_trainees.py:1:0: W0611: Unused points_for imported from blackjack (unused-import)",
     "blackjack/test_blackjack_trainees.py:1:0: W0611: Unused play imported from blackjack (unused-import)",
-    "blackjack/test_blackjack_trainees.py:2:0: W0611: Unused player_chooses imported from support.testing_util (unused-import)",
-    "blackjack/test_blackjack_trainees.py:2:0: W0611: Unused reset_test_suite imported from support.testing_util (unused-import)",
-    "blackjack/test_blackjack_trainees.py:2:0: W0611: Unused capture_print_lines imported from support.testing_util (unused-import)"
+    "blackjack/test_blackjack_trainees.py:2:0: W0611: Unused player_chooses imported from support.testing_util (unused-import)"
    ],
    "score": 0.0
   },
