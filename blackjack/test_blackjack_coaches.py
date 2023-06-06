@@ -1,7 +1,7 @@
 # pylint: skip-file
 
 from blackjack import generate_deck, points_for, play
-from support.testing_util import player_chooses, reset_test_suite, capture_print_lines
+from support.testing_util import player_chooses
 
 """
 Testing Generate Deck
@@ -107,79 +107,66 @@ Testing gameplay
 """
 
 
-def test_player_turn_output_hitting(monkeypatch):
+def test_player_turn_output_hitting(monkeypatch, capsys):
     """player_turn(): choosing to hit outputs a "Hitting" message"""
 
     # The choices that a player will make during the game
     player_chooses(["hit", "stick"], monkeypatch)
-
-    # A tool to capture all of the lines printed in the game
-    captured_output = capture_print_lines()
 
     # Start our game with the given seed
     # All printed lines will be stored inside captured_output in a single string
     play(389813913)
 
     # Split the messages received into a list of individual lines
-    printed_lines = captured_output.getvalue().split("\n")
-
-    # Reset the test suite ready for the next test
-    reset_test_suite()
+    captured_output = capsys.readouterr().out
+    printed_lines = captured_output.split("\n")
 
     # Check that the word Hitting is in the list
     assert "Hitting" in printed_lines
 
 
-def test_player_choosing_hit_updates_hand(monkeypatch):
+def test_player_choosing_hit_updates_hand(monkeypatch, capsys):
     """player_turn(): choosing to hit shows an updated hand"""
 
     player_chooses(["hit", "stick"], monkeypatch)
 
-    captured_output = capture_print_lines()
-
     play(389813913)
 
-    printed_lines = captured_output.getvalue().split("\n")
+    captured_output = capsys.readouterr().out
+    printed_lines = captured_output.split("\n")
     printed_lines = list(
         filter(lambda m: (m.startswith('Your hand is')), printed_lines))
-
-    reset_test_suite()
 
     assert printed_lines[1] != None
     assert "Your hand is 9S, KS, 9H" in printed_lines[1]
 
 
-def test_player_choosing_hit_updates_points(monkeypatch):
+def test_player_choosing_hit_updates_points(monkeypatch, capsys):
     """player_turn(): choosing to hit shows an updated point total"""
 
     player_chooses(["hit", "stick"], monkeypatch)
 
-    captured_output = capture_print_lines()
 
     play(313131)
 
-    printed_lines = captured_output.getvalue().split("\n")
+    captured_output = capsys.readouterr().out
+    printed_lines = captured_output.split("\n")
     print(printed_lines)
     printed_lines = list(
         filter(lambda m: (m.startswith('Your hand is')), printed_lines))
-
-    reset_test_suite()
 
     assert printed_lines[1] != None
     assert "(14 points)" in printed_lines[1]
 
 
-def test_player_choosing_hit_updates_points(monkeypatch):
+def test_player_choosing_hit_updates_points(monkeypatch, capsys):
     """player_turn(): hitting and busting displays a 'you lose' message"""
 
     player_chooses(["hit"], monkeypatch)
 
-    captured_output = capture_print_lines()
-
     play(seed=1595870164262)
 
-    printed_lines = captured_output.getvalue().split("\n")
-
-    reset_test_suite()
+    captured_output = capsys.readouterr().out
+    printed_lines = captured_output.split("\n")
 
     assert "You lose!" in printed_lines
