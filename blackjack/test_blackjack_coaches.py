@@ -146,7 +146,6 @@ def test_player_choosing_hit_updates_points(monkeypatch, capsys):
 
     player_chooses(["hit", "stick"], monkeypatch)
 
-
     play(313131)
 
     captured_output = capsys.readouterr().out
@@ -159,7 +158,7 @@ def test_player_choosing_hit_updates_points(monkeypatch, capsys):
     assert "(14 points)" in printed_lines[1]
 
 
-def test_player_choosing_hit_updates_points(monkeypatch, capsys):
+def test_player_hitting_and_busting_lose(monkeypatch, capsys):
     """player_turn(): hitting and busting displays a 'you lose' message"""
 
     player_chooses(["hit"], monkeypatch)
