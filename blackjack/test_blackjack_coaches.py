@@ -1,6 +1,8 @@
 # pylint: skip-file
 
 from blackjack import generate_deck, points_for, play
+"""File for tests written by us - the coaches"""
+
 from support.testing_util import player_chooses
 
 """
