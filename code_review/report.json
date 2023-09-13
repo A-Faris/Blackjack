@@ -51,12 +51,17 @@
   {
    "file_name": "./blackjack/test_blackjack_coaches.py",
    "errors": [
-    "tdd/test_generate_card.py:3:0: W0612: Unused variable 'generate_card' (unused-variable)",
+    "tdd/test_generate_card.py:11:0: C0301: Line too long (164/150) (line-too-long)",
+    "tdd/test_generate_card.py:11:1: W0511: TODO: Write several more tests below using different inputs for the generate_card function. You won't be able to cover them all - but try to cover the main cases. (fixme)",
+    "tdd/test_generate_card.py:15:1: W0511: TODO: Write several tests below to test this function (fixme)",
+    "tdd/test_generate_card.py:19:1: W0511: TODO: Write several tests below to test this function (fixme)",
+    "tdd/test_generate_card.py:23:1: W0511: TODO: Write several tests below to test this function (fixme)",
+    "tdd/test_generate_card.py:27:1: W0511: TODO: Write several tests below to test this function (fixme)",
+    "tdd/test_generate_card.py:8:0: W0612: Unused variable 'test_generate_card' (unused-variable)",
     "tdd/test_generate_card.py:3:0: W0612: Unused variable 'get_score' (unused-variable)",
-    "tdd/test_generate_card.py:3:0: W0611: Unused generate_card imported from generate_card (unused-import)",
     "tdd/test_generate_card.py:3:0: W0611: Unused get_score imported from generate_card (unused-import)"
    ],
-   "score": 33.3
+   "score": 0.0
   },
   {
    "file_name": "./tdd/generate_card.py",
@@ -72,5 +77,5 @@
    "score": 0.0
   }
  ],
- "average_score": 8.3
+ "average_score": 0.0
 }
