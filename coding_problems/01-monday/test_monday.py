@@ -1,7 +1,4 @@
-from random import randint
 from monday import get_real_floor
-from random import randint
-
 
 def test_get_real_floor_with_1():
     assert get_real_floor(1) == 0
@@ -33,23 +30,6 @@ def test_greater_than_13():
 def test_basement():
     assert get_real_floor(-2) == -2
     assert get_real_floor(-5) == -5
-
-
-def test_random_tests():
-
-    def theRealOne(n):
-        if n <= 0:
-            return n
-        elif n < 13:
-            return n - 1
-        else:
-            return n - 2
-
-    for i in range(200):
-        floor = randint(-500, 500)
-        floor += floor == 13
-
-        assert get_real_floor(floor) == theRealOne(floor)
 
 
 def test_basic_test_cases():

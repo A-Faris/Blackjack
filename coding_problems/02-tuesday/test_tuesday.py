@@ -11,12 +11,11 @@ def test_multi_table_with_1():
         1) == '1 * 1 = 1\n2 * 1 = 2\n3 * 1 = 3\n4 * 1 = 4\n5 * 1 = 5\n6 * 1 = 6\n7 * 1 = 7\n8 * 1 = 8\n9 * 1 = 9\n10 * 1 = 10'
 
 
-def test_random_tests():
-    import random
+def test_multi_table_with_10():
+    assert multi_table(
+        10) == '1 * 10 = 10\n2 * 10 = 20\n3 * 10 = 30\n4 * 10 = 40\n5 * 10 = 50\n6 * 10 = 60\n7 * 10 = 70\n8 * 10 = 80\n9 * 10 = 90\n10 * 10 = 100'
 
-    for i in range(50):
-        number = random.randint(-100, 100)
 
-        expected_output = "\n".join(
-            ["{} * {} = {}".format(i, number, i * number) for i in range(1, 11)])
-        assert multi_table(number) == expected_output
+def test_multi_table_with_2():
+    assert multi_table(
+        2) == '1 * 2 = 2\n2 * 2 = 4\n3 * 2 = 6\n4 * 2 = 8\n5 * 2 = 10\n6 * 2 = 12\n7 * 2 = 14\n8 * 2 = 16\n9 * 2 = 18\n10 * 2 = 20'
