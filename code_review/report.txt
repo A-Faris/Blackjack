@@ -49,121 +49,15 @@ blackjack/blackjack.py:34:0: W0612: Unused variable 'get_next_card_from_deck' (u
 Your code has been rated at 0.00/10
 
 ./coding_problems/02-tuesday/tuesday.py
-************* Module tuesday
-coding_problems/02-tuesday/tuesday.py:1:16: W0613: Unused argument 'number' (unused-argument)
-coding_problems/02-tuesday/tuesday.py:1:0: W0612: Unused variable 'multi_table' (unused-variable)
-
------------------------------------
-Your code has been rated at 0.00/10
-
 ./coding_problems/02-tuesday/test_tuesday.py
-************* Module test_tuesday
-coding_problems/02-tuesday/test_tuesday.py:4:0: C0103: Function name "test_multi_table_with_5" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
-coding_problems/02-tuesday/test_tuesday.py:9:0: C0103: Function name "test_multi_table_with_1" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
-coding_problems/02-tuesday/test_tuesday.py:15:4: C0415: Import outside toplevel (random) (import-outside-toplevel)
-coding_problems/02-tuesday/test_tuesday.py:4:0: W0612: Unused variable 'test_multi_table_with_5' (unused-variable)
-coding_problems/02-tuesday/test_tuesday.py:9:0: W0612: Unused variable 'test_multi_table_with_1' (unused-variable)
-coding_problems/02-tuesday/test_tuesday.py:14:0: W0612: Unused variable 'test_random_tests' (unused-variable)
-
------------------------------------
-Your code has been rated at 4.55/10
-
 ./coding_problems/01-monday/monday.py
-************* Module monday
-coding_problems/01-monday/monday.py:1:19: W0613: Unused argument 'n' (unused-argument)
-coding_problems/01-monday/monday.py:1:0: W0612: Unused variable 'get_real_floor' (unused-variable)
-
------------------------------------
-Your code has been rated at 0.00/10
-
 ./coding_problems/01-monday/test_monday.py
-************* Module test_monday
-coding_problems/01-monday/test_monday.py:3:0: W0404: Reimport 'randint' (imported line 1) (reimported)
-coding_problems/01-monday/test_monday.py:6:0: C0103: Function name "test_get_real_floor_with_1" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
-coding_problems/01-monday/test_monday.py:10:0: C0103: Function name "test_get_real_floor_with_5" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
-coding_problems/01-monday/test_monday.py:14:0: C0103: Function name "test_get_real_floor_with_15" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
-coding_problems/01-monday/test_monday.py:18:0: C0103: Function name "test_lower_than_13" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
-coding_problems/01-monday/test_monday.py:26:0: C0103: Function name "test_greater_than_13" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
-coding_problems/01-monday/test_monday.py:41:8: R1705: Unnecessary "elif" after "return", remove the leading "el" from "elif" (no-else-return)
-coding_problems/01-monday/test_monday.py:48:8: W0612: Unused variable 'i' (unused-variable)
-coding_problems/01-monday/test_monday.py:40:4: C0103: Function name "theRealOne" doesn't conform to the `snake_case` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
-coding_problems/01-monday/test_monday.py:6:0: W0612: Unused variable 'test_get_real_floor_with_1' (unused-variable)
-coding_problems/01-monday/test_monday.py:10:0: W0612: Unused variable 'test_get_real_floor_with_5' (unused-variable)
-coding_problems/01-monday/test_monday.py:14:0: W0612: Unused variable 'test_get_real_floor_with_15' (unused-variable)
-coding_problems/01-monday/test_monday.py:18:0: W0612: Unused variable 'test_lower_than_13' (unused-variable)
-coding_problems/01-monday/test_monday.py:26:0: W0612: Unused variable 'test_greater_than_13' (unused-variable)
-coding_problems/01-monday/test_monday.py:33:0: W0612: Unused variable 'test_basement' (unused-variable)
-coding_problems/01-monday/test_monday.py:38:0: W0612: Unused variable 'test_random_tests' (unused-variable)
-coding_problems/01-monday/test_monday.py:55:0: W0612: Unused variable 'test_basic_test_cases' (unused-variable)
-
------------------------------------
-Your code has been rated at 5.53/10
-
 ./coding_problems/04-thursday/test_thursday.py
 ./coding_problems/04-thursday/thursday.py
 ./coding_problems/05-friday/friday.py
-************* Module friday
-coding_problems/05-friday/friday.py:1:15: W0613: Unused argument 's' (unused-argument)
-coding_problems/05-friday/friday.py:1:23: W0613: Unused argument 't' (unused-argument)
-coding_problems/05-friday/friday.py:1:0: W0612: Unused variable 'is_anagram' (unused-variable)
-
------------------------------------
-Your code has been rated at 0.00/10
-
 ./coding_problems/05-friday/test_friday.py
-************* Module test_friday
-coding_problems/05-friday/test_friday.py:5:11: C0121: Comparison 'is_anagram('anagram', 'nagaram') == True' should be 'is_anagram('anagram', 'nagaram') is True' if checking for the singleton value True, or 'is_anagram('anagram', 'nagaram')' if testing for truthiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:6:11: C0121: Comparison 'is_anagram('rat', 'car') == False' should be 'is_anagram('rat', 'car') is False' if checking for the singleton value False, or 'not is_anagram('rat', 'car')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:7:11: C0121: Comparison 'is_anagram('listen', 'silent') == True' should be 'is_anagram('listen', 'silent') is True' if checking for the singleton value True, or 'is_anagram('listen', 'silent')' if testing for truthiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:8:11: C0121: Comparison 'is_anagram('elbow', 'below') == True' should be 'is_anagram('elbow', 'below') is True' if checking for the singleton value True, or 'is_anagram('elbow', 'below')' if testing for truthiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:9:11: C0121: Comparison 'is_anagram('elbows', 'below') == False' should be 'is_anagram('elbows', 'below') is False' if checking for the singleton value False, or 'not is_anagram('elbows', 'below')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:10:11: C0121: Comparison 'is_anagram('elbow', 'below') == False' should be 'is_anagram('elbow', 'below') is False' if checking for the singleton value False, or 'not is_anagram('elbow', 'below')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:11:11: C0121: Comparison 'is_anagram('a', 'ab') == False' should be 'is_anagram('a', 'ab') is False' if checking for the singleton value False, or 'not is_anagram('a', 'ab')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:12:11: C0121: Comparison 'is_anagram('ab', 'a') == False' should be 'is_anagram('ab', 'a') is False' if checking for the singleton value False, or 'not is_anagram('ab', 'a')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:13:11: C0121: Comparison 'is_anagram('ab', 'ba') == True' should be 'is_anagram('ab', 'ba') is True' if checking for the singleton value True, or 'is_anagram('ab', 'ba')' if testing for truthiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:14:11: C0121: Comparison 'is_anagram('abc', 'cba') == True' should be 'is_anagram('abc', 'cba') is True' if checking for the singleton value True, or 'is_anagram('abc', 'cba')' if testing for truthiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:15:11: C0121: Comparison 'is_anagram('abbc', 'cba') == False' should be 'is_anagram('abbc', 'cba') is False' if checking for the singleton value False, or 'not is_anagram('abbc', 'cba')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:16:11: C0121: Comparison 'is_anagram('abbc', 'cbad') == False' should be 'is_anagram('abbc', 'cbad') is False' if checking for the singleton value False, or 'not is_anagram('abbc', 'cbad')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:17:11: C0121: Comparison 'is_anagram('abbc', 'cbac') == True' should be 'is_anagram('abbc', 'cbac') is True' if checking for the singleton value True, or 'is_anagram('abbc', 'cbac')' if testing for truthiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:18:11: C0121: Comparison 'is_anagram('abbc', 'cbacd') == False' should be 'is_anagram('abbc', 'cbacd') is False' if checking for the singleton value False, or 'not is_anagram('abbc', 'cbacd')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:19:11: C0121: Comparison 'is_anagram('abbc', 'cbacd') == False' should be 'is_anagram('abbc', 'cbacd') is False' if checking for the singleton value False, or 'not is_anagram('abbc', 'cbacd')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:23:11: C0121: Comparison 'is_anagram('', '') == True' should be 'is_anagram('', '') is True' if checking for the singleton value True, or 'is_anagram('', '')' if testing for truthiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:24:11: C0121: Comparison 'is_anagram('', 'a') == False' should be 'is_anagram('', 'a') is False' if checking for the singleton value False, or 'not is_anagram('', 'a')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:25:11: C0121: Comparison 'is_anagram('a', '') == False' should be 'is_anagram('a', '') is False' if checking for the singleton value False, or 'not is_anagram('a', '')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:26:11: C0121: Comparison 'is_anagram('', 'ab') == False' should be 'is_anagram('', 'ab') is False' if checking for the singleton value False, or 'not is_anagram('', 'ab')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:27:11: C0121: Comparison 'is_anagram('ab', '') == False' should be 'is_anagram('ab', '') is False' if checking for the singleton value False, or 'not is_anagram('ab', '')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:28:11: C0121: Comparison 'is_anagram('', 'abc') == False' should be 'is_anagram('', 'abc') is False' if checking for the singleton value False, or 'not is_anagram('', 'abc')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:29:11: C0121: Comparison 'is_anagram('abc', '') == False' should be 'is_anagram('abc', '') is False' if checking for the singleton value False, or 'not is_anagram('abc', '')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:30:11: C0121: Comparison 'is_anagram('', 'abbc') == False' should be 'is_anagram('', 'abbc') is False' if checking for the singleton value False, or 'not is_anagram('', 'abbc')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:31:11: C0121: Comparison 'is_anagram('abbc', '') == False' should be 'is_anagram('abbc', '') is False' if checking for the singleton value False, or 'not is_anagram('abbc', '')' if testing for falsiness (singleton-comparison)
-coding_problems/05-friday/test_friday.py:4:0: W0612: Unused variable 'test_anagram' (unused-variable)
-coding_problems/05-friday/test_friday.py:22:0: W0612: Unused variable 'test_anagram_empty' (unused-variable)
-
------------------------------------
-Your code has been rated at 0.37/10
-
 ./coding_problems/03-wednesday/test_wednesday.py
-************* Module test_wednesday
-coding_problems/03-wednesday/test_wednesday.py:31:4: E1111: Assigning result of a function call, where the function has no return (assignment-from-no-return)
-coding_problems/03-wednesday/test_wednesday.py:1:0: W0612: Unused variable 'pytest' (unused-variable)
-coding_problems/03-wednesday/test_wednesday.py:9:0: W0612: Unused variable 'test_get_villain_name_with_known_dates' (unused-variable)
-coding_problems/03-wednesday/test_wednesday.py:35:0: W0612: Unused variable 'random_test_cases' (unused-variable)
-coding_problems/03-wednesday/test_wednesday.py:1:0: W0611: Unused import pytest (unused-import)
-
------------------------------------
-Your code has been rated at 6.09/10
-
 ./coding_problems/03-wednesday/wednesday.py
-************* Module wednesday
-coding_problems/03-wednesday/wednesday.py:10:4: W0107: Unnecessary pass statement (unnecessary-pass)
-coding_problems/03-wednesday/wednesday.py:4:21: W0613: Unused argument 'birthdate' (unused-argument)
-coding_problems/03-wednesday/wednesday.py:5:4: W0612: Unused variable 'first' (unused-variable)
-coding_problems/03-wednesday/wednesday.py:7:4: W0612: Unused variable 'last' (unused-variable)
-coding_problems/03-wednesday/wednesday.py:4:0: W0612: Unused variable 'get_villain_name' (unused-variable)
-
------------------------------------
-Your code has been rated at 0.00/10
-
 ./tdd/test_generate_card.py
 ************* Module test_generate_card
 tdd/test_generate_card.py:11:0: C0301: Line too long (164/150) (line-too-long)
