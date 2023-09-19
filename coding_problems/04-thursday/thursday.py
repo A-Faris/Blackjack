@@ -1,2 +1,2 @@
-def best_friend(txt, a, b):
+def best_friend(txt: str, a: str, b: str) -> bool:
     pass
