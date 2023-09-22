@@ -1,5 +1,3 @@
-# pylint: skip-file
-
 from friday import is_anagram
 
 

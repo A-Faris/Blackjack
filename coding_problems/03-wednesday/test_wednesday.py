@@ -1,5 +1,3 @@
-# pylint: skip-file
-
 import datetime
 
 import pytest

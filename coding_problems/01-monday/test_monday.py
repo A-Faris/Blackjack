@@ -1,5 +1,3 @@
-# pylint: skip-file
-
 import pytest
 
 from monday import get_real_floor

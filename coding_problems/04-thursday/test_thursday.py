@@ -1,5 +1,3 @@
-# pylint: skip-file
-
 import pytest
 
 from thursday import best_friend
