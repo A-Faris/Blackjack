@@ -49,7 +49,20 @@
    "score": 0.0
   },
   {
-   "file_name": "./coding_problems/02-tuesday/tuesday.py",
+   "file_name": "./blackjack/test_blackjack_coaches.py",
+   "errors": [
+    "tdd/generate_card.py:6:4: W0107: Unnecessary pass statement (unnecessary-pass)",
+    "tdd/generate_card.py:4:18: W0613: Unused argument 'suit' (unused-argument)",
+    "tdd/generate_card.py:4:29: W0613: Unused argument 'number' (unused-argument)",
+    "tdd/generate_card.py:11:4: W0107: Unnecessary pass statement (unnecessary-pass)",
+    "tdd/generate_card.py:9:14: W0613: Unused argument 'card' (unused-argument)",
+    "tdd/generate_card.py:4:0: W0612: Unused variable 'generate_card' (unused-variable)",
+    "tdd/generate_card.py:9:0: W0612: Unused variable 'get_score' (unused-variable)"
+   ],
+   "score": 0.0
+  },
+  {
+   "file_name": "./tdd/test_generate_card.py",
    "errors": [
     "tdd/test_generate_card.py:11:0: C0301: Line too long (164/150) (line-too-long)",
     "tdd/test_generate_card.py:11:1: W0511: TODO: Write several more tests below using different inputs for the generate_card function. You won't be able to cover them all - but try to cover the main cases. (fixme)",
@@ -60,19 +73,6 @@
     "tdd/test_generate_card.py:8:0: W0612: Unused variable 'test_generate_card' (unused-variable)",
     "tdd/test_generate_card.py:3:0: W0612: Unused variable 'get_score' (unused-variable)",
     "tdd/test_generate_card.py:3:0: W0611: Unused get_score imported from generate_card (unused-import)"
-   ],
-   "score": 0.0
-  },
-  {
-   "file_name": "./tdd/generate_card.py",
-   "errors": [
-    "tdd/generate_card.py:6:4: W0107: Unnecessary pass statement (unnecessary-pass)",
-    "tdd/generate_card.py:4:18: W0613: Unused argument 'suit' (unused-argument)",
-    "tdd/generate_card.py:4:29: W0613: Unused argument 'number' (unused-argument)",
-    "tdd/generate_card.py:11:4: W0107: Unnecessary pass statement (unnecessary-pass)",
-    "tdd/generate_card.py:9:14: W0613: Unused argument 'card' (unused-argument)",
-    "tdd/generate_card.py:4:0: W0612: Unused variable 'generate_card' (unused-variable)",
-    "tdd/generate_card.py:9:0: W0612: Unused variable 'get_score' (unused-variable)"
    ],
    "score": 0.0
   }

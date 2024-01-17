@@ -17,7 +17,6 @@ blackjack/test_blackjack_trainees.py:4:0: W0611: Unused player_chooses imported 
 Your code has been rated at 0.00/10
 
 ./blackjack/support/testing_util.py
-./blackjack/test_blackjack_coaches.py
 ./blackjack/blackjack.py
 ************* Module blackjack
 blackjack/blackjack.py:21:5: W0511: TODO: Write your code here to generate a deck of cards (fixme)
@@ -48,16 +47,20 @@ blackjack/blackjack.py:34:0: W0612: Unused variable 'get_next_card_from_deck' (u
 -----------------------------------
 Your code has been rated at 0.00/10
 
-./coding_problems/02-tuesday/tuesday.py
-./coding_problems/02-tuesday/test_tuesday.py
-./coding_problems/01-monday/monday.py
-./coding_problems/01-monday/test_monday.py
-./coding_problems/04-thursday/test_thursday.py
-./coding_problems/04-thursday/thursday.py
-./coding_problems/05-friday/friday.py
-./coding_problems/05-friday/test_friday.py
-./coding_problems/03-wednesday/test_wednesday.py
-./coding_problems/03-wednesday/wednesday.py
+./blackjack/test_blackjack_coaches.py
+./tdd/generate_card.py
+************* Module generate_card
+tdd/generate_card.py:6:4: W0107: Unnecessary pass statement (unnecessary-pass)
+tdd/generate_card.py:4:18: W0613: Unused argument 'suit' (unused-argument)
+tdd/generate_card.py:4:29: W0613: Unused argument 'number' (unused-argument)
+tdd/generate_card.py:11:4: W0107: Unnecessary pass statement (unnecessary-pass)
+tdd/generate_card.py:9:14: W0613: Unused argument 'card' (unused-argument)
+tdd/generate_card.py:4:0: W0612: Unused variable 'generate_card' (unused-variable)
+tdd/generate_card.py:9:0: W0612: Unused variable 'get_score' (unused-variable)
+
+-----------------------------------
+Your code has been rated at 0.00/10
+
 ./tdd/test_generate_card.py
 ************* Module test_generate_card
 tdd/test_generate_card.py:11:0: C0301: Line too long (164/150) (line-too-long)
@@ -69,19 +72,6 @@ tdd/test_generate_card.py:27:1: W0511: TODO: Write several tests below to test t
 tdd/test_generate_card.py:8:0: W0612: Unused variable 'test_generate_card' (unused-variable)
 tdd/test_generate_card.py:3:0: W0612: Unused variable 'get_score' (unused-variable)
 tdd/test_generate_card.py:3:0: W0611: Unused get_score imported from generate_card (unused-import)
-
------------------------------------
-Your code has been rated at 0.00/10
-
-./tdd/generate_card.py
-************* Module generate_card
-tdd/generate_card.py:6:4: W0107: Unnecessary pass statement (unnecessary-pass)
-tdd/generate_card.py:4:18: W0613: Unused argument 'suit' (unused-argument)
-tdd/generate_card.py:4:29: W0613: Unused argument 'number' (unused-argument)
-tdd/generate_card.py:11:4: W0107: Unnecessary pass statement (unnecessary-pass)
-tdd/generate_card.py:9:14: W0613: Unused argument 'card' (unused-argument)
-tdd/generate_card.py:4:0: W0612: Unused variable 'generate_card' (unused-variable)
-tdd/generate_card.py:9:0: W0612: Unused variable 'get_score' (unused-variable)
 
 -----------------------------------
 Your code has been rated at 0.00/10
