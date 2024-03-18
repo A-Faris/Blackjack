@@ -1,7 +1,30 @@
 {
  "files": [
   {
-   "file_name": "./blackjack/test_blackjack_trainees.py",
+   "file_name": "./blackjack/support/testing_util.py",
+   "errors": [
+    "blackjack/blackjack.py:23:5: W0511: TODO: Write your code here to generate a deck of cards (fixme)",
+    "blackjack/blackjack.py:31:5: W0511: TODO: Write your code here (fixme)",
+    "blackjack/blackjack.py:39:5: W0511: TODO: Write your code here (fixme)",
+    "blackjack/blackjack.py:49:5: W0511: TODO: Write your code here (fixme)",
+    "blackjack/blackjack.py:69:9: W0511: TODO: Implement the rest of the players turn (fixme)",
+    "blackjack/blackjack.py:97:5: W0511: TODO: Implement the Dealer's turn (fixme)",
+    "blackjack/blackjack.py:99:5: W0511: TODO: Implement the end of the game (fixme)",
+    "blackjack/blackjack.py:28:15: W0613: Unused argument 'cards' (unused-argument)",
+    "blackjack/blackjack.py:36:28: W0613: Unused argument 'deck' (unused-argument)",
+    "blackjack/blackjack.py:44:22: W0613: Unused argument 'deck' (unused-argument)",
+    "blackjack/blackjack.py:65:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)",
+    "blackjack/blackjack.py:9:0: C0103: Constant name \"name\" doesn't conform to the `UPPER_CASE` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<UPPER_CASE>[A-Z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
+    "blackjack/blackjack.py:5:0: W0612: Unused variable 'LOSE_MESSAGE' (unused-variable)",
+    "blackjack/blackjack.py:6:0: W0612: Unused variable 'WIN_MESSAGE' (unused-variable)",
+    "blackjack/blackjack.py:7:0: W0612: Unused variable 'DRAW_MESSAGE' (unused-variable)",
+    "blackjack/blackjack.py:9:0: W0612: Unused variable 'name' (unused-variable)",
+    "blackjack/blackjack.py:36:0: W0612: Unused variable 'get_next_card_from_deck' (unused-variable)"
+   ],
+   "score": 63.8
+  },
+  {
+   "file_name": "./blackjack/test_blackjack_coaches.py",
    "errors": [
     "blackjack/test_blackjack_trainees.py:3:0: W0612: Unused variable 'generate_deck' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:3:0: W0612: Unused variable 'points_for' (unused-variable)",
@@ -19,49 +42,6 @@
    "score": 0.0
   },
   {
-   "file_name": "./blackjack/support/testing_util.py",
-   "errors": [
-    "blackjack/blackjack.py:21:5: W0511: TODO: Write your code here to generate a deck of cards (fixme)",
-    "blackjack/blackjack.py:29:5: W0511: TODO: Write your code here (fixme)",
-    "blackjack/blackjack.py:37:5: W0511: TODO: Write your code here (fixme)",
-    "blackjack/blackjack.py:47:5: W0511: TODO: Write your code here (fixme)",
-    "blackjack/blackjack.py:67:9: W0511: TODO: Implement the rest of the players turn (fixme)",
-    "blackjack/blackjack.py:95:5: W0511: TODO: Implement the Dealer's turn (fixme)",
-    "blackjack/blackjack.py:97:5: W0511: TODO: Implement the end of the game (fixme)",
-    "blackjack/blackjack.py:10:38: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
-    "blackjack/blackjack.py:17:23: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
-    "blackjack/blackjack.py:26:22: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
-    "blackjack/blackjack.py:26:15: W0613: Unused argument 'cards' (unused-argument)",
-    "blackjack/blackjack.py:34:34: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
-    "blackjack/blackjack.py:34:28: W0613: Unused argument 'deck' (unused-argument)",
-    "blackjack/blackjack.py:42:28: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
-    "blackjack/blackjack.py:42:45: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
-    "blackjack/blackjack.py:42:59: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
-    "blackjack/blackjack.py:42:22: W0613: Unused argument 'deck' (unused-argument)",
-    "blackjack/blackjack.py:52:22: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
-    "blackjack/blackjack.py:52:39: E1136: Value 'list' is unsubscriptable (unsubscriptable-object)",
-    "blackjack/blackjack.py:63:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)",
-    "blackjack/blackjack.py:5:0: W0612: Unused variable 'LOSE_MESSAGE' (unused-variable)",
-    "blackjack/blackjack.py:6:0: W0612: Unused variable 'WIN_MESSAGE' (unused-variable)",
-    "blackjack/blackjack.py:7:0: W0612: Unused variable 'DRAW_MESSAGE' (unused-variable)",
-    "blackjack/blackjack.py:34:0: W0612: Unused variable 'get_next_card_from_deck' (unused-variable)"
-   ],
-   "score": 0.0
-  },
-  {
-   "file_name": "./blackjack/test_blackjack_coaches.py",
-   "errors": [
-    "tdd/generate_card.py:6:4: W0107: Unnecessary pass statement (unnecessary-pass)",
-    "tdd/generate_card.py:4:18: W0613: Unused argument 'suit' (unused-argument)",
-    "tdd/generate_card.py:4:29: W0613: Unused argument 'number' (unused-argument)",
-    "tdd/generate_card.py:11:4: W0107: Unnecessary pass statement (unnecessary-pass)",
-    "tdd/generate_card.py:9:14: W0613: Unused argument 'card' (unused-argument)",
-    "tdd/generate_card.py:4:0: W0612: Unused variable 'generate_card' (unused-variable)",
-    "tdd/generate_card.py:9:0: W0612: Unused variable 'get_score' (unused-variable)"
-   ],
-   "score": 0.0
-  },
-  {
    "file_name": "./tdd/test_generate_card.py",
    "errors": [
     "tdd/test_generate_card.py:11:0: C0301: Line too long (164/150) (line-too-long)",
@@ -75,7 +55,20 @@
     "tdd/test_generate_card.py:3:0: W0611: Unused get_score imported from generate_card (unused-import)"
    ],
    "score": 0.0
+  },
+  {
+   "file_name": "./tdd/generate_card.py",
+   "errors": [
+    "tdd/generate_card.py:6:4: W0107: Unnecessary pass statement (unnecessary-pass)",
+    "tdd/generate_card.py:4:18: W0613: Unused argument 'suit' (unused-argument)",
+    "tdd/generate_card.py:4:29: W0613: Unused argument 'number' (unused-argument)",
+    "tdd/generate_card.py:11:4: W0107: Unnecessary pass statement (unnecessary-pass)",
+    "tdd/generate_card.py:9:14: W0613: Unused argument 'card' (unused-argument)",
+    "tdd/generate_card.py:4:0: W0612: Unused variable 'generate_card' (unused-variable)",
+    "tdd/generate_card.py:9:0: W0612: Unused variable 'get_score' (unused-variable)"
+   ],
+   "score": 0.0
   }
  ],
- "average_score": 0.0
+ "average_score": 15.9
 }
