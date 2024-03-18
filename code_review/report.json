@@ -49,28 +49,26 @@
     "tdd/test_generate_card.py:11:0: C0301: Line too long (164/150) (line-too-long)",
     "tdd/test_generate_card.py:11:1: W0511: TODO: Write several more tests below using different inputs for the generate_card function. You won't be able to cover them all - but try to cover the main cases. (fixme)",
     "tdd/test_generate_card.py:15:1: W0511: TODO: Write several tests below to test this function (fixme)",
-    "tdd/test_generate_card.py:19:1: W0511: TODO: Write several tests below to test this function (fixme)",
     "tdd/test_generate_card.py:23:1: W0511: TODO: Write several tests below to test this function (fixme)",
-    "tdd/test_generate_card.py:27:1: W0511: TODO: Write several tests below to test this function (fixme)",
+    "tdd/test_generate_card.py:31:1: W0511: TODO: Write several tests below to test this function (fixme)",
+    "tdd/test_generate_card.py:39:1: W0511: TODO: Write several tests below to test this function (fixme)",
+    "tdd/test_generate_card.py:42:0: C0103: Function name \"test_get_score_return_0\" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)",
     "tdd/test_generate_card.py:8:0: W0612: Unused variable 'test_generate_card' (unused-variable)",
-    "tdd/test_generate_card.py:3:0: W0612: Unused variable 'get_score' (unused-variable)",
-    "tdd/test_generate_card.py:3:0: W0611: Unused get_score imported from generate_card (unused-import)"
+    "tdd/test_generate_card.py:18:0: W0612: Unused variable 'test_generate_card_suit_invalid' (unused-variable)",
+    "tdd/test_generate_card.py:26:0: W0612: Unused variable 'test_generate_card_number_invalid' (unused-variable)",
+    "tdd/test_generate_card.py:34:0: W0612: Unused variable 'test_get_score' (unused-variable)",
+    "tdd/test_generate_card.py:42:0: W0612: Unused variable 'test_get_score_return_0' (unused-variable)"
    ],
-   "score": 0.0
+   "score": 25.0
   },
   {
    "file_name": "./tdd/generate_card.py",
    "errors": [
-    "tdd/generate_card.py:6:4: W0107: Unnecessary pass statement (unnecessary-pass)",
-    "tdd/generate_card.py:4:18: W0613: Unused argument 'suit' (unused-argument)",
-    "tdd/generate_card.py:4:29: W0613: Unused argument 'number' (unused-argument)",
-    "tdd/generate_card.py:11:4: W0107: Unnecessary pass statement (unnecessary-pass)",
-    "tdd/generate_card.py:9:14: W0613: Unused argument 'card' (unused-argument)",
-    "tdd/generate_card.py:4:0: W0612: Unused variable 'generate_card' (unused-variable)",
-    "tdd/generate_card.py:9:0: W0612: Unused variable 'get_score' (unused-variable)"
+    "tdd/generate_card.py:8:0: W0612: Unused variable 'generate_card' (unused-variable)",
+    "tdd/generate_card.py:15:0: W0612: Unused variable 'get_score' (unused-variable)"
    ],
-   "score": 0.0
+   "score": 81.8
   }
  ],
- "average_score": 15.1
+ "average_score": 41.8
 }
