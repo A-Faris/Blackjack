@@ -6,6 +6,8 @@ LOSE_MESSAGE = "You lose!"
 WIN_MESSAGE = "You win!"
 DRAW_MESSAGE = "Draw!"
 
+name = 'Faris'
+
 
 def shuffle(deck: list, seed: int) -> list[str]:
     """Randomises a deck of cards"""
