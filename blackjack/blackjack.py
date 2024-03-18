@@ -7,6 +7,7 @@ WIN_MESSAGE = "You win!"
 DRAW_MESSAGE = "Draw!"
 
 name = 'Faris'
+last_name = 'Abulula'
 
 
 def shuffle(deck: list, seed: int) -> list[str]:
