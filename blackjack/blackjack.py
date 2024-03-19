@@ -49,7 +49,7 @@ def points_for_hand(cards: list[str]) -> int:
     return point
 
 
-def points_for_card(card):
+def points_for_card(card: str) -> int:
     if card[0] in ("J", "Q", "K"):
         return 10
     elif card[0] == "A":
@@ -67,7 +67,7 @@ def get_next_card_from_deck(deck: list[str]) -> str:
 
     # TODO: Write your code here
 
-    return ""
+    return deck[-1]
 
 
 def deal_card_to_hand(deck: list[str], hand: list[str]) -> list[str]:
@@ -76,7 +76,7 @@ def deal_card_to_hand(deck: list[str], hand: list[str]) -> list[str]:
     """
 
     # TODO: Write your code here
-
+    hand.append(deck.pop())
     return hand
 
 
