@@ -3,8 +3,30 @@
   {
    "file_name": "./blackjack/support/testing_util.py",
    "errors": [
-    "blackjack/blackjack.py:41:31: E0001: Parsing failed: 'invalid syntax (blackjack, line 41)' (syntax-error)",
-    "blackjack/test_blackjack_trainees.py:3:0: E0001: Cannot import 'blackjack' due to 'invalid syntax (blackjack, line 41)' (syntax-error)",
+    "blackjack/blackjack.py:25:5: W0511: TODO: Write your code here to generate a deck of cards (fixme)",
+    "blackjack/blackjack.py:35:5: W0511: TODO: Write your code here (fixme)",
+    "blackjack/blackjack.py:68:5: W0511: TODO: Write your code here (fixme)",
+    "blackjack/blackjack.py:78:5: W0511: TODO: Write your code here (fixme)",
+    "blackjack/blackjack.py:98:9: W0511: TODO: Implement the rest of the players turn (fixme)",
+    "blackjack/blackjack.py:126:5: W0511: TODO: Implement the Dealer's turn (fixme)",
+    "blackjack/blackjack.py:128:5: W0511: TODO: Implement the end of the game (fixme)",
+    "blackjack/blackjack.py:53:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)",
+    "blackjack/blackjack.py:53:18: R6201: Consider using set for membership test (use-set-for-membership)",
+    "blackjack/blackjack.py:65:28: W0613: Unused argument 'deck' (unused-argument)",
+    "blackjack/blackjack.py:73:22: W0613: Unused argument 'deck' (unused-argument)",
+    "blackjack/blackjack.py:89:45: E0602: Undefined variable 'points_for' (undefined-variable)",
+    "blackjack/blackjack.py:94:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)",
+    "blackjack/blackjack.py:5:0: W0612: Unused variable 'LOSE_MESSAGE' (unused-variable)",
+    "blackjack/blackjack.py:6:0: W0612: Unused variable 'WIN_MESSAGE' (unused-variable)",
+    "blackjack/blackjack.py:7:0: W0612: Unused variable 'DRAW_MESSAGE' (unused-variable)",
+    "blackjack/blackjack.py:32:0: W0612: Unused variable 'points_for_hand' (unused-variable)",
+    "blackjack/blackjack.py:65:0: W0612: Unused variable 'get_next_card_from_deck' (unused-variable)"
+   ],
+   "score": 68.6
+  },
+  {
+   "file_name": "./blackjack/test_blackjack_coaches.py",
+   "errors": [
     "blackjack/test_blackjack_trainees.py:7:0: W0612: Unused variable 'test_points_for_hand' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:11:0: W0612: Unused variable 'test_points_for_hand_ten' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:15:0: W0612: Unused variable 'test_points_for_hand_letters' (unused-variable)",
@@ -53,5 +75,5 @@
    "score": 81.8
   }
  ],
- "average_score": 35.6
+ "average_score": 43.8
 }
