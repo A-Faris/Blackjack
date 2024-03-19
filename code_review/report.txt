@@ -1,40 +1,25 @@
 ./blackjack/support/testing_util.py
 ./blackjack/blackjack.py
 ************* Module blackjack
-blackjack/blackjack.py:24:5: W0511: TODO: Write your code here to generate a deck of cards (fixme)
-blackjack/blackjack.py:32:5: W0511: TODO: Write your code here (fixme)
-blackjack/blackjack.py:40:5: W0511: TODO: Write your code here (fixme)
-blackjack/blackjack.py:50:5: W0511: TODO: Write your code here (fixme)
-blackjack/blackjack.py:70:9: W0511: TODO: Implement the rest of the players turn (fixme)
-blackjack/blackjack.py:98:5: W0511: TODO: Implement the Dealer's turn (fixme)
-blackjack/blackjack.py:100:5: W0511: TODO: Implement the end of the game (fixme)
-blackjack/blackjack.py:29:15: W0613: Unused argument 'cards' (unused-argument)
-blackjack/blackjack.py:37:28: W0613: Unused argument 'deck' (unused-argument)
-blackjack/blackjack.py:45:22: W0613: Unused argument 'deck' (unused-argument)
-blackjack/blackjack.py:66:4: R1705: Unnecessary "elif" after "return", remove the leading "el" from "elif" (no-else-return)
-blackjack/blackjack.py:9:0: C0103: Constant name "name" doesn't conform to the `UPPER_CASE` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<UPPER_CASE>[A-Z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
-blackjack/blackjack.py:10:0: C0103: Constant name "last_name" doesn't conform to the `UPPER_CASE` group in the '(?:(?P<snake_case>[a-z_]+)|(?P<UPPER_CASE>[A-Z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
-blackjack/blackjack.py:5:0: W0612: Unused variable 'LOSE_MESSAGE' (unused-variable)
-blackjack/blackjack.py:6:0: W0612: Unused variable 'WIN_MESSAGE' (unused-variable)
-blackjack/blackjack.py:7:0: W0612: Unused variable 'DRAW_MESSAGE' (unused-variable)
-blackjack/blackjack.py:9:0: W0612: Unused variable 'name' (unused-variable)
-blackjack/blackjack.py:10:0: W0612: Unused variable 'last_name' (unused-variable)
-blackjack/blackjack.py:37:0: W0612: Unused variable 'get_next_card_from_deck' (unused-variable)
-
------------------------------------
-Your code has been rated at 6.04/10
-
+blackjack/blackjack.py:41:31: E0001: Parsing failed: 'invalid syntax (blackjack, line 41)' (syntax-error)
 ./blackjack/test_blackjack_coaches.py
 ./blackjack/test_blackjack_trainees.py
 ************* Module test_blackjack_trainees
+blackjack/test_blackjack_trainees.py:3:0: E0001: Cannot import 'blackjack' due to 'invalid syntax (blackjack, line 41)' (syntax-error)
+blackjack/test_blackjack_trainees.py:7:0: W0612: Unused variable 'test_points_for_hand' (unused-variable)
+blackjack/test_blackjack_trainees.py:11:0: W0612: Unused variable 'test_points_for_hand_ten' (unused-variable)
+blackjack/test_blackjack_trainees.py:15:0: W0612: Unused variable 'test_points_for_hand_letters' (unused-variable)
+blackjack/test_blackjack_trainees.py:19:0: W0612: Unused variable 'test_points_for_hand_two_aces' (unused-variable)
+blackjack/test_blackjack_trainees.py:23:0: W0612: Unused variable 'test_points_for_hand_six_cards' (unused-variable)
+blackjack/test_blackjack_trainees.py:27:0: W0612: Unused variable 'test_points_for_hand_invalid_suits' (unused-variable)
+blackjack/test_blackjack_trainees.py:31:0: W0612: Unused variable 'test_points_for_hand_other_point_letters' (unused-variable)
+blackjack/test_blackjack_trainees.py:35:0: W0612: Unused variable 'test_points_for_hand_other_numbers' (unused-variable)
 blackjack/test_blackjack_trainees.py:3:0: W0612: Unused variable 'generate_deck' (unused-variable)
-blackjack/test_blackjack_trainees.py:3:0: W0612: Unused variable 'points_for' (unused-variable)
 blackjack/test_blackjack_trainees.py:3:0: W0612: Unused variable 'play' (unused-variable)
 blackjack/test_blackjack_trainees.py:3:0: W0612: Unused variable 'get_next_card_from_deck' (unused-variable)
 blackjack/test_blackjack_trainees.py:3:0: W0612: Unused variable 'deal_card_to_hand' (unused-variable)
 blackjack/test_blackjack_trainees.py:4:0: W0612: Unused variable 'player_chooses' (unused-variable)
 blackjack/test_blackjack_trainees.py:3:0: W0611: Unused generate_deck imported from blackjack (unused-import)
-blackjack/test_blackjack_trainees.py:3:0: W0611: Unused points_for imported from blackjack (unused-import)
 blackjack/test_blackjack_trainees.py:3:0: W0611: Unused play imported from blackjack (unused-import)
 blackjack/test_blackjack_trainees.py:3:0: W0611: Unused get_next_card_from_deck imported from blackjack (unused-import)
 blackjack/test_blackjack_trainees.py:3:0: W0611: Unused deal_card_to_hand imported from blackjack (unused-import)
