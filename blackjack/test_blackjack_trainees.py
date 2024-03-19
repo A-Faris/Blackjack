@@ -9,7 +9,7 @@ def test_points_for_hand():
 
 
 def test_points_for_hand_ten():
-    assert points_for_hand(['10S', '10D']) == 9
+    assert points_for_hand(['10S', '10D']) == 20
 
 
 def test_points_for_hand_letters():

@@ -38,7 +38,7 @@ def points_for_hand(cards: list[str]) -> int:
 
     point = 0
     for card in cards:
-        if len(card) == 2 or  and card[-1] in ["H", "S", "C", "D"]:
+        if len(card) < 4 and card[-1] in suits:
             point += points_for_card(card)
         else:
             return 0
@@ -50,12 +50,14 @@ def points_for_hand(cards: list[str]) -> int:
 
 
 def points_for_card(card):
-    if card[0] in ["J", "Q", "K"]:
+    if card[0] in ("J", "Q", "K"):
         return 10
     elif card[0] == "A":
         return 11
-    elif card[0] in ["2", "3", "4", "5", "6", "7", "8", "9", "10"]:
+    elif card[0] in numbers:
         return int(card[0])
+    elif card[:2] == "10":
+        return 10
     else:
         return 0
 
