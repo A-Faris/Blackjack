@@ -1,6 +1,6 @@
 # pylint: skip-file
 
-from blackjack import generate_deck, points_for, play
+from blackjack import generate_deck, points_for_hand, play
 """File for tests written by us - the coaches"""
 
 from support.testing_util import player_chooses
@@ -70,38 +70,38 @@ def test_generate_deck():
 
 
 """
-Testing points_for
+Testing points_for_hand
 """
 
 
 def test_points_for_empty():
-    """points_for() calculates the correct amount of points when no cards are present"""
+    """points_for_hand() calculates the correct amount of points when no cards are present"""
 
-    assert points_for([]) == 0
+    assert points_for_hand([]) == 0
 
 
 def test_points_for_two_cards():
-    """points_for() calculates the correct amount of points when only number cards are used"""
+    """points_for_hand() calculates the correct amount of points when only number cards are used"""
 
-    assert points_for(['7H', '2D']) == 9
+    assert points_for_hand(['7H', '2D']) == 9
 
 
 def test_points_five_cards():
-    """points_for() calculates the correct amount of points when only number and face cards are used"""
+    """points_for_hand() calculates the correct amount of points when only number and face cards are used"""
 
-    assert points_for(['3D', 'JC', 'QH', '2H', 'AC']) == 36
+    assert points_for_hand(['3D', 'JC', 'QH', '2H', 'AC']) == 36
 
 
 def test_points_two_aces():
-    """points_for() calculates the correct amount of points when there are only two aces"""
+    """points_for_hand() calculates the correct amount of points when there are only two aces"""
 
-    assert points_for(['AD', 'AC']) == 21
+    assert points_for_hand(['AD', 'AC']) == 21
 
 
 def test_points_two_aces_plus_one():
-    """points_for() calculates the correct amount of points when there are two aces and another card"""
+    """points_for_hand() calculates the correct amount of points when there are two aces and another card"""
 
-    assert points_for(['2D', 'AD', 'AC']) == 24
+    assert points_for_hand(['2D', 'AD', 'AC']) == 24
 
 
 """

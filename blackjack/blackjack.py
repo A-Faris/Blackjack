@@ -67,7 +67,7 @@ def get_next_card_from_deck(deck: list[str]) -> str:
 
     # TODO: Write your code here
 
-    return deck[-1]
+    return deck.pop()
 
 
 def deal_card_to_hand(deck: list[str], hand: list[str]) -> list[str]:
@@ -76,7 +76,7 @@ def deal_card_to_hand(deck: list[str], hand: list[str]) -> list[str]:
     """
 
     # TODO: Write your code here
-    hand.append(deck.pop())
+    hand.append(get_next_card_from_deck(deck))
     return hand
 
 
@@ -86,7 +86,7 @@ def player_turn(deck: list[str], hand: list[str]) -> bool:
     based on their response of either 'hit' or 'stick'
     """
 
-    print(f"Your hand is {', '.join(hand)} ({points_for(hand)} points)")
+    print(f"Your hand is {', '.join(hand)} ({points_for_hand(hand)} points)")
 
     # Accept the choice from the player
     action = input('What do you want to do? ("hit" or "stick")')
