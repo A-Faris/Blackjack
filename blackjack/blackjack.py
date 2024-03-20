@@ -6,6 +6,8 @@ LOSE_MESSAGE = "You lose!"
 WIN_MESSAGE = "You win!"
 DRAW_MESSAGE = "Draw!"
 
+MAX_POINT = 21
+
 suits = ("S", "D", "C", "H")
 numbers = ("A", "2", "3", "4", "5", "6",
            "7", "8", "9", "10", "J", "Q", "K")
@@ -67,7 +69,7 @@ def get_next_card_from_deck(deck: list[str]) -> str:
 
     # TODO: Write your code here
 
-    return deck.pop()
+    return deck.pop(0)
 
 
 def deal_card_to_hand(deck: list[str], hand: list[str]) -> list[str]:
@@ -82,8 +84,7 @@ def deal_card_to_hand(deck: list[str], hand: list[str]) -> list[str]:
 
 def player_turn(deck: list[str], hand: list[str]) -> bool:
     """
-    Asks the player for their next choice and changes the game state
-    based on their response of either 'hit' or 'stick'
+    Asks the player for their next choice and changes the game state based on their response of either 'hit' or 'stick'
     """
 
     print(f"Your hand is {', '.join(hand)} ({points_for_hand(hand)} points)")
@@ -92,18 +93,59 @@ def player_turn(deck: list[str], hand: list[str]) -> bool:
     action = input('What do you want to do? ("hit" or "stick")')
 
     if action == "hit":
-
         hand = deal_card_to_hand(deck, hand)
 
         # TODO: Implement the rest of the players turn
         # It's still the player's turn
+        print(f"Hitting\nYou draw {hand[-1]}")
+        print(f"Your hand is {', '.join(hand)} ({
+              points_for_hand(hand)} points)")
+
+        if points_for_hand(hand) == MAX_POINT:  # Player wins
+            print(WIN_MESSAGE)
+            return False
+        elif points_for_hand(hand) > MAX_POINT:  # Dealer Wins
+            print(LOSE_MESSAGE)
+            return False
 
         return True
-    elif action == "stick":
 
+    elif action == "stick":
         return False  # End the player's turn
+
     else:
         return None
+
+
+def dealer_turn(deck: list[str], hand: list[str]) -> bool:
+    """
+    The dealer takes their turn based on a simple rule. If the hand points is less than 17, hit.
+    """
+
+    print(f"Dealer's hand is {', '.join(hand)
+                              } ({points_for_hand(hand)} points)")
+
+    if points_for_hand(hand) > MAX_POINT:
+        ...
+
+    elif points_for_hand(hand) < 17:  # Hit
+        hand = deal_card_to_hand(deck, hand)
+
+        print(f"Dealer draws {hand[-1]}")
+        print(f"Dealer's hand is {', '.join(hand)} ({
+              points_for_hand(hand)} points)")
+
+        if points_for_hand(hand) == MAX_POINT:  # Player wins
+            print(WIN_MESSAGE)
+            return False
+        elif points_for_hand(hand) > MAX_POINT:  # Dealer Wins
+            print(LOSE_MESSAGE)
+            return False
+
+        return True
+
+    else:
+        return False
 
 
 def play(seed: int) -> None:
@@ -124,6 +166,12 @@ def play(seed: int) -> None:
         is_player_turn = player_turn(shuffled_deck, player_hand)
 
     # TODO: Implement the Dealer's turn
+    dealer_hand = [shuffled_deck.pop(0), shuffled_deck.pop(0)]
+
+    is_dealer_turn = True
+
+    while is_dealer_turn:
+        is_dealer_turn = dealer_turn(shuffled_deck, dealer_hand)
 
     # TODO: Implement the end of the game
 
