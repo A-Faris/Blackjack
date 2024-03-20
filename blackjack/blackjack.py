@@ -60,8 +60,7 @@ def points_for_card(card: str) -> int:
         return int(card[0])
     elif card[:2] == "10":
         return 10
-    else:
-        return 0
+    return 0
 
 
 def get_next_card_from_deck(deck: list[str]) -> str:
@@ -89,34 +88,25 @@ def player_turn(deck: list[str], hand: list[str]) -> bool:
 
     print(f"Your hand is {', '.join(hand)} ({points_for_hand(hand)} points)")
 
+    if points_for_hand(hand) == MAX_POINT:  # Player wins
+        return False
+
+    elif points_for_hand(hand) > MAX_POINT:  # Dealer Wins
+        print(LOSE_MESSAGE)
+        return False
+
     # Accept the choice from the player
     action = input('What do you want to do? ("hit" or "stick") ')
 
     if action == "hit":
         hand = deal_card_to_hand(deck, hand)
-
-        # TODO: Implement the rest of the players turn
-        # It's still the player's turn
         print(f"Hitting\nYou draw {hand[-1]}")
-
-        if points_for_hand(hand) == MAX_POINT:  # Player wins
-            print(f"Your hand is {', '.join(hand)} ({
-                points_for_hand(hand)} points)")
-            print(WIN_MESSAGE)
-            exit()
-        elif points_for_hand(hand) > MAX_POINT:  # Dealer Wins
-            print(f"Your hand is {', '.join(hand)} ({
-                points_for_hand(hand)} points)")
-            print(LOSE_MESSAGE)
-            exit()
-
         return True
 
     elif action == "stick":
         return False  # End the player's turn
 
-    else:
-        return None
+    return None
 
 
 def dealer_turn(deck: list[str], hand: list[str]) -> bool:
@@ -125,15 +115,14 @@ def dealer_turn(deck: list[str], hand: list[str]) -> bool:
     """
 
     print(f"Dealer's hand is {', '.join(hand)} ({
-          points_for_hand(hand)} points)")
+        points_for_hand(hand)} points)")
 
     if points_for_hand(hand) > MAX_POINT:  # Player wins
         print(WIN_MESSAGE)
-        exit()
+        return False
 
     elif points_for_hand(hand) < 17:  # Hit
         hand = deal_card_to_hand(deck, hand)
-
         print(f"Dealer draws {hand[-1]}")
         return True
 
@@ -148,30 +137,29 @@ def play(seed: int) -> None:
     with seed=313131 it will always have the same outcome (the order the cards are dealt)
     """
     new_deck = generate_deck()
-    shuffled_deck = shuffle(new_deck, seed)
+    deck = shuffle(new_deck, seed)
 
-    player_hand = [shuffled_deck.pop(0), shuffled_deck.pop(0)]
+    player_hand = [deck.pop(0), deck.pop(0)]
 
     is_player_turn = True
 
     while is_player_turn:
-        is_player_turn = player_turn(shuffled_deck, player_hand)
+        is_player_turn = player_turn(deck, player_hand)
 
-    # TODO: Implement the Dealer's turn
-    dealer_hand = [shuffled_deck.pop(0), shuffled_deck.pop(0)]
+    if points_for_hand(player_hand) < MAX_POINT:
+        dealer_hand = [deck.pop(0), deck.pop(0)]
 
-    is_dealer_turn = True
+        is_dealer_turn = True
 
-    while is_dealer_turn:
-        is_dealer_turn = dealer_turn(shuffled_deck, dealer_hand)
+        while is_dealer_turn:
+            is_dealer_turn = dealer_turn(deck, dealer_hand)
 
-    # TODO: Implement the end of the game
-    if dealer_hand > player_hand:
-        print(LOSE_MESSAGE)
-    elif player_hand > dealer_hand:
-        print(WIN_MESSAGE)
-    else:
-        print(DRAW_MESSAGE)
+        if dealer_hand > player_hand:
+            print(LOSE_MESSAGE)
+        elif player_hand > dealer_hand:
+            print(WIN_MESSAGE)
+        else:
+            print(DRAW_MESSAGE)
 
 
 def get_seed() -> int:
