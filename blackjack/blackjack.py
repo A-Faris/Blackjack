@@ -90,7 +90,7 @@ def player_turn(deck: list[str], hand: list[str]) -> bool:
     print(f"Your hand is {', '.join(hand)} ({points_for_hand(hand)} points)")
 
     # Accept the choice from the player
-    action = input('What do you want to do? ("hit" or "stick")')
+    action = input('What do you want to do? ("hit" or "stick") ')
 
     if action == "hit":
         hand = deal_card_to_hand(deck, hand)
@@ -98,15 +98,17 @@ def player_turn(deck: list[str], hand: list[str]) -> bool:
         # TODO: Implement the rest of the players turn
         # It's still the player's turn
         print(f"Hitting\nYou draw {hand[-1]}")
-        print(f"Your hand is {', '.join(hand)} ({
-              points_for_hand(hand)} points)")
 
         if points_for_hand(hand) == MAX_POINT:  # Player wins
+            print(f"Your hand is {', '.join(hand)} ({
+                points_for_hand(hand)} points)")
             print(WIN_MESSAGE)
-            return False
+            exit()
         elif points_for_hand(hand) > MAX_POINT:  # Dealer Wins
+            print(f"Your hand is {', '.join(hand)} ({
+                points_for_hand(hand)} points)")
             print(LOSE_MESSAGE)
-            return False
+            exit()
 
         return True
 
@@ -122,30 +124,20 @@ def dealer_turn(deck: list[str], hand: list[str]) -> bool:
     The dealer takes their turn based on a simple rule. If the hand points is less than 17, hit.
     """
 
-    print(f"Dealer's hand is {', '.join(hand)
-                              } ({points_for_hand(hand)} points)")
+    print(f"Dealer's hand is {', '.join(hand)} ({
+          points_for_hand(hand)} points)")
 
-    if points_for_hand(hand) > MAX_POINT:
-        ...
+    if points_for_hand(hand) > MAX_POINT:  # Player wins
+        print(WIN_MESSAGE)
+        exit()
 
     elif points_for_hand(hand) < 17:  # Hit
         hand = deal_card_to_hand(deck, hand)
 
         print(f"Dealer draws {hand[-1]}")
-        print(f"Dealer's hand is {', '.join(hand)} ({
-              points_for_hand(hand)} points)")
-
-        if points_for_hand(hand) == MAX_POINT:  # Player wins
-            print(WIN_MESSAGE)
-            return False
-        elif points_for_hand(hand) > MAX_POINT:  # Dealer Wins
-            print(LOSE_MESSAGE)
-            return False
-
         return True
 
-    else:
-        return False
+    return False
 
 
 def play(seed: int) -> None:
@@ -174,6 +166,12 @@ def play(seed: int) -> None:
         is_dealer_turn = dealer_turn(shuffled_deck, dealer_hand)
 
     # TODO: Implement the end of the game
+    if dealer_hand > player_hand:
+        print(LOSE_MESSAGE)
+    elif player_hand > dealer_hand:
+        print(WIN_MESSAGE)
+    else:
+        print(DRAW_MESSAGE)
 
 
 def get_seed() -> int:

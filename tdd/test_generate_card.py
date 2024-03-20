@@ -32,7 +32,7 @@ def test_generate_card_number_invalid():
 
 
 def test_get_score():
-    assert get_score("8J") == "8"
+    assert get_score("8H") == "8"
 
 
 """Tests that the get_score function returns 0 if the card is invalid"""
