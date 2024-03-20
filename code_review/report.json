@@ -3,8 +3,8 @@
   {
    "file_name": "./blackjack/support/testing_util.py",
    "errors": [
-    "blackjack/blackjack.py:101:15: E0001: Parsing failed: 'unterminated string literal (detected at line 101) (blackjack, line 101)' (syntax-error)",
-    "blackjack/test_blackjack_trainees.py:3:0: E0001: Cannot import 'blackjack' due to 'unterminated string literal (detected at line 101) (blackjack, line 101)' (syntax-error)",
+    "blackjack/blackjack.py:103:19: E0001: Parsing failed: 'unterminated string literal (detected at line 103) (blackjack, line 103)' (syntax-error)",
+    "blackjack/test_blackjack_trainees.py:3:0: E0001: Cannot import 'blackjack' due to 'unterminated string literal (detected at line 103) (blackjack, line 103)' (syntax-error)",
     "blackjack/test_blackjack_trainees.py:7:0: W0612: Unused variable 'test_points_for_hand' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:11:0: W0612: Unused variable 'test_points_for_hand_ten' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:15:0: W0612: Unused variable 'test_points_for_hand_letters' (unused-variable)",
