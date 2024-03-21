@@ -3,8 +3,10 @@
   {
    "file_name": "./blackjack/support/testing_util.py",
    "errors": [
-    "blackjack/blackjack.py:104:11: E0001: Parsing failed: 'unterminated string literal (detected at line 104) (blackjack, line 104)' (syntax-error)",
-    "blackjack/test_blackjack_trainees.py:3:0: E0001: Cannot import 'blackjack' due to 'unterminated string literal (detected at line 104) (blackjack, line 104)' (syntax-error)",
+    "blackjack/blackjack.py:105:11: E0001: Parsing failed: 'unterminated string literal (detected at line 105) (blackjack, line 105)' (syntax-error)",
+    "blackjack/test_blackjack_trainees.py:3:0: E0001: Cannot import 'blackjack' due to 'unterminated string literal (detected at line 105) (blackjack, line 105)' (syntax-error)",
+    "blackjack/test_blackjack_trainees.py:83:38: W0613: Unused argument 'monkeypatch' (unused-argument)",
+    "blackjack/test_blackjack_trainees.py:83:51: W0613: Unused argument 'capsys' (unused-argument)",
     "blackjack/test_blackjack_trainees.py:7:0: W0612: Unused variable 'test_points_for_hand' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:11:0: W0612: Unused variable 'test_points_for_hand_ten' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:15:0: W0612: Unused variable 'test_points_for_hand_letters' (unused-variable)",
@@ -15,14 +17,15 @@
     "blackjack/test_blackjack_trainees.py:35:0: W0612: Unused variable 'test_points_for_hand_other_numbers' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:39:0: W0612: Unused variable 'test_get_next_card_from_deck' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:43:0: W0612: Unused variable 'test_deal_card_to_hand' (unused-variable)",
+    "blackjack/test_blackjack_trainees.py:47:0: W0612: Unused variable 'test_dealer_loses_when_bust' (unused-variable)",
+    "blackjack/test_blackjack_trainees.py:59:0: W0612: Unused variable 'test_player_wins_with_higher_score' (unused-variable)",
+    "blackjack/test_blackjack_trainees.py:71:0: W0612: Unused variable 'test_player_loses_with_lower_score' (unused-variable)",
+    "blackjack/test_blackjack_trainees.py:83:0: W0612: Unused variable 'test_player_and_dealer_take_turns' (unused-variable)",
+    "blackjack/test_blackjack_trainees.py:87:0: W0612: Unused variable 'test_same_score_draw' (unused-variable)",
     "blackjack/test_blackjack_trainees.py:3:0: W0612: Unused variable 'generate_deck' (unused-variable)",
-    "blackjack/test_blackjack_trainees.py:3:0: W0612: Unused variable 'play' (unused-variable)",
-    "blackjack/test_blackjack_trainees.py:4:0: W0612: Unused variable 'player_chooses' (unused-variable)",
-    "blackjack/test_blackjack_trainees.py:3:0: W0611: Unused generate_deck imported from blackjack (unused-import)",
-    "blackjack/test_blackjack_trainees.py:3:0: W0611: Unused play imported from blackjack (unused-import)",
-    "blackjack/test_blackjack_trainees.py:4:0: W0611: Unused player_chooses imported from support.testing_util (unused-import)"
+    "blackjack/test_blackjack_trainees.py:3:0: W0611: Unused generate_deck imported from blackjack (unused-import)"
    ],
-   "score": 4.5
+   "score": 51.0
   },
   {
    "file_name": "./tdd/test_generate_card.py",
@@ -51,5 +54,5 @@
    "score": 81.8
   }
  ],
- "average_score": 37.1
+ "average_score": 52.6
 }
