@@ -11,8 +11,8 @@ DRAW_MESSAGE = "Draw!"
 MAX_POINT = 21
 
 suits = ("S", "D", "C", "H")
-numbers = ("A", "2", "3", "4", "5", "6",
-           "7", "8", "9", "10", "J", "Q", "K")
+card_values = ("A", "2", "3", "4", "5", "6", "7",
+               "8", "9", "10", "J", "Q", "K")
 
 
 def shuffle(deck: list, seed: int) -> list[str]:
@@ -26,8 +26,8 @@ def generate_deck() -> list[str]:
     """Generates a deck of cards and returns them"""
     cards = []
     for suit in suits:
-        for number in numbers:
-            cards.append(number + suit)
+        for value in card_values:
+            cards.append(value + suit)
     return cards
 
 
@@ -55,7 +55,7 @@ def points_for_card(card: str) -> int:
         return 10
     if card[0] == "A":
         return 11
-    if card[0] in numbers:
+    if card[0] in card_values:
         return int(card[0])
     if card[:2] == "10":
         return 10
@@ -68,17 +68,13 @@ def get_next_card_from_deck(deck: list[str]) -> str:
 
 
 def deal_card_to_hand(deck: list[str], hand: list[str]) -> list[str]:
-    """
-    Draws a card from the deck and adds it to the hand then return the hand.
-    """
+    """Draws a card from the deck and adds it to the hand then return the hand."""
     hand.append(get_next_card_from_deck(deck))
     return hand
 
 
 def player_turn(deck: list[str], hand: list[str]) -> bool:
-    """
-    Asks the player to 'hit' or 'stick' and changes the game state based on their response 
-    """
+    """Asks the player to 'hit' or 'stick' and changes the game state based on their response"""
 
     print(f"Your hand is {', '.join(hand)} ({points_for_hand(hand)} points)")
 
@@ -103,9 +99,7 @@ def player_turn(deck: list[str], hand: list[str]) -> bool:
 
 
 def dealer_turn(deck: list[str], hand: list[str]) -> bool:
-    """
-    The dealer takes their turn based on a simple rule. If the hand points is less than 17, hit.
-    """
+    """The dealer takes their turn and hits if their hand points is less than 17"""
 
     print(f"Dealer's hand is {', '.join(hand)} ({
         points_for_hand(hand)} points)")
@@ -139,7 +133,7 @@ def play(seed: int) -> None:
     while is_player_turn:
         is_player_turn = player_turn(deck, player_hand)
 
-    if points_for_hand(player_hand) < MAX_POINT:
+    if points_for_hand(player_hand) <= MAX_POINT:
         dealer_hand = [deck.pop(0), deck.pop(0)]
 
         is_dealer_turn = True
@@ -147,12 +141,13 @@ def play(seed: int) -> None:
         while is_dealer_turn:
             is_dealer_turn = dealer_turn(deck, dealer_hand)
 
-        if dealer_hand > player_hand:
-            print(LOSE_MESSAGE)
-        elif player_hand > dealer_hand:
-            print(WIN_MESSAGE)
-        else:
-            print(DRAW_MESSAGE)
+        if points_for_hand(dealer_hand) <= MAX_POINT:
+            if points_for_hand(dealer_hand) > points_for_hand(player_hand):
+                print(LOSE_MESSAGE)
+            elif points_for_hand(player_hand) > points_for_hand(dealer_hand):
+                print(WIN_MESSAGE)
+            else:
+                print(DRAW_MESSAGE)
 
 
 def get_seed() -> int:

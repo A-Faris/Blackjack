@@ -37,8 +37,8 @@ def test_points_for_hand_other_numbers():
 
 
 def test_get_next_card_from_deck():
-    assert get_next_card_from_deck(["2H", "3H"]) == "3H"
+    assert get_next_card_from_deck(["2H", "3H"]) == "2H"
 
 
 def test_deal_card_to_hand():
-    assert deal_card_to_hand(["2H", "3H"], ["4D", "KS"]) == ["4D", "KS", "3H"]
+    assert deal_card_to_hand(["2H", "3H"], ["4D", "KS"]) == ["4D", "KS", "2H"]
