@@ -1,3 +1,5 @@
+""""Blackjack Game"""
+
 from time import time
 from random import Random
 import argparse
@@ -23,8 +25,6 @@ def shuffle(deck: list, seed: int) -> list[str]:
 def generate_deck() -> list[str]:
     """Generates a deck of cards and returns them"""
     cards = []
-
-    # TODO: Write your code here to generate a deck of cards
     for suit in suits:
         for number in numbers:
             cards.append(number + suit)
@@ -33,10 +33,8 @@ def generate_deck() -> list[str]:
 
 def points_for_hand(cards: list[str]) -> int:
     """Calculates the amount of points for a given list of cards"""
-
-    # TODO: Write your code here
     if len(cards) > 5:
-        return 21
+        return MAX_POINT
 
     point = 0
     for card in cards:
@@ -46,28 +44,26 @@ def points_for_hand(cards: list[str]) -> int:
             return 0
 
     if len(cards) == 2 and cards[0][0] == "A" and cards[1][0] == "A":
-        return 21
+        return MAX_POINT
 
     return point
 
 
 def points_for_card(card: str) -> int:
+    """Calculates the value of a card from a deck of cards"""
     if card[0] in ("J", "Q", "K"):
         return 10
-    elif card[0] == "A":
+    if card[0] == "A":
         return 11
-    elif card[0] in numbers:
+    if card[0] in numbers:
         return int(card[0])
-    elif card[:2] == "10":
+    if card[:2] == "10":
         return 10
     return 0
 
 
 def get_next_card_from_deck(deck: list[str]) -> str:
     """Gets the next card from the deck and returns it"""
-
-    # TODO: Write your code here
-
     return deck.pop(0)
 
 
@@ -75,15 +71,13 @@ def deal_card_to_hand(deck: list[str], hand: list[str]) -> list[str]:
     """
     Draws a card from the deck and adds it to the hand then return the hand.
     """
-
-    # TODO: Write your code here
     hand.append(get_next_card_from_deck(deck))
     return hand
 
 
 def player_turn(deck: list[str], hand: list[str]) -> bool:
     """
-    Asks the player for their next choice and changes the game state based on their response of either 'hit' or 'stick'
+    Asks the player to 'hit' or 'stick' and changes the game state based on their response 
     """
 
     print(f"Your hand is {', '.join(hand)} ({points_for_hand(hand)} points)")
@@ -91,11 +85,10 @@ def player_turn(deck: list[str], hand: list[str]) -> bool:
     if points_for_hand(hand) == MAX_POINT:  # Player wins
         return False
 
-    elif points_for_hand(hand) > MAX_POINT:  # Dealer Wins
+    if points_for_hand(hand) > MAX_POINT:  # Dealer Wins
         print(LOSE_MESSAGE)
         return False
 
-    # Accept the choice from the player
     action = input('What do you want to do? ("hit" or "stick") ')
 
     if action == "hit":
@@ -103,7 +96,7 @@ def player_turn(deck: list[str], hand: list[str]) -> bool:
         print(f"Hitting\nYou draw {hand[-1]}")
         return True
 
-    elif action == "stick":
+    if action == "stick":
         return False  # End the player's turn
 
     return None
@@ -121,7 +114,7 @@ def dealer_turn(deck: list[str], hand: list[str]) -> bool:
         print(WIN_MESSAGE)
         return False
 
-    elif points_for_hand(hand) < 17:  # Hit
+    if points_for_hand(hand) < 17:  # Hit
         hand = deal_card_to_hand(deck, hand)
         print(f"Dealer draws {hand[-1]}")
         return True
@@ -184,5 +177,4 @@ def get_seed() -> int:
 
 
 if __name__ == "__main__":
-    seed = get_seed()
-    play(seed)
+    play(get_seed())
