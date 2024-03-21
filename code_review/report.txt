@@ -1,11 +1,11 @@
 ./blackjack/support/testing_util.py
 ./blackjack/blackjack.py
 ************* Module blackjack
-blackjack/blackjack.py:110:11: E0001: Parsing failed: 'unterminated string literal (detected at line 110) (blackjack, line 110)' (syntax-error)
+blackjack/blackjack.py:104:11: E0001: Parsing failed: 'unterminated string literal (detected at line 104) (blackjack, line 104)' (syntax-error)
 ./blackjack/test_blackjack_coaches.py
 ./blackjack/test_blackjack_trainees.py
 ************* Module test_blackjack_trainees
-blackjack/test_blackjack_trainees.py:3:0: E0001: Cannot import 'blackjack' due to 'unterminated string literal (detected at line 110) (blackjack, line 110)' (syntax-error)
+blackjack/test_blackjack_trainees.py:3:0: E0001: Cannot import 'blackjack' due to 'unterminated string literal (detected at line 104) (blackjack, line 104)' (syntax-error)
 blackjack/test_blackjack_trainees.py:7:0: W0612: Unused variable 'test_points_for_hand' (unused-variable)
 blackjack/test_blackjack_trainees.py:11:0: W0612: Unused variable 'test_points_for_hand_ten' (unused-variable)
 blackjack/test_blackjack_trainees.py:15:0: W0612: Unused variable 'test_points_for_hand_letters' (unused-variable)
