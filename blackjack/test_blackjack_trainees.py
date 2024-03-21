@@ -75,13 +75,20 @@ def test_player_loses_with_lower_score(monkeypatch, capsys):
 
     captured_output = capsys.readouterr().out
     printed_lines = captured_output.split("\n")
-    print(printed_lines)
+    # print(printed_lines)
 
     assert "You lose!" in printed_lines[-2]
 
 
 def test_player_and_dealer_take_turns(monkeypatch, capsys):
-    ...  # assert "You win!" in printed_lines
+    player_chooses(["stick"], monkeypatch)
+
+    play(1)
+
+    captured_output = capsys.readouterr().out
+    # print(captured_output)
+
+    assert "Your hand is" and "Dealer's hand is" in captured_output
 
 
 def test_same_score_draw(monkeypatch, capsys):
@@ -94,3 +101,18 @@ def test_same_score_draw(monkeypatch, capsys):
     # print(printed_lines)
 
     assert "Draw!" in printed_lines[-2]
+
+
+def test_dealer_hits_below_seventeen(monkeypatch, capsys):
+    player_chooses(["stick"], monkeypatch)
+
+    play(3)
+
+    captured_output = capsys.readouterr().out
+    printed_lines = captured_output.split("\n")
+    # print(printed_lines)
+
+    for i in range(len(printed_lines)):
+        # print(i, printed_lines[i], printed_lines[i][-10:-8])
+        if "Dealer's hand" in printed_lines[i] and int(printed_lines[i][-10:-8]) < 17:
+            assert "Dealer draws" in printed_lines[i+1]
