@@ -42,3 +42,55 @@ def test_get_next_card_from_deck():
 
 def test_deal_card_to_hand():
     assert deal_card_to_hand(["2H", "3H"], ["4D", "KS"]) == ["4D", "KS", "2H"]
+
+
+def test_dealer_loses_when_bust(monkeypatch, capsys):
+    player_chooses(["stick"], monkeypatch)
+
+    play(3)
+
+    captured_output = capsys.readouterr().out
+    printed_lines = captured_output.split("\n")
+    # print(printed_lines)
+
+    assert "You win!" in printed_lines[-2]
+
+
+def test_player_wins_with_higher_score(monkeypatch, capsys):
+    player_chooses(["stick"], monkeypatch)
+
+    play(10)
+
+    captured_output = capsys.readouterr().out
+    printed_lines = captured_output.split("\n")
+    # print(printed_lines)
+
+    assert "You win!" in printed_lines[-2]
+
+
+def test_player_loses_with_lower_score(monkeypatch, capsys):
+    player_chooses(["stick"], monkeypatch)
+
+    play(2)
+
+    captured_output = capsys.readouterr().out
+    printed_lines = captured_output.split("\n")
+    print(printed_lines)
+
+    assert "You lose!" in printed_lines[-2]
+
+
+def test_player_and_dealer_take_turns(monkeypatch, capsys):
+    ...  # assert "You win!" in printed_lines
+
+
+def test_same_score_draw(monkeypatch, capsys):
+    player_chooses(["stick"], monkeypatch)
+
+    play(1)
+
+    captured_output = capsys.readouterr().out
+    printed_lines = captured_output.split("\n")
+    # print(printed_lines)
+
+    assert "Draw!" in printed_lines[-2]
