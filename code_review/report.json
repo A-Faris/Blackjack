@@ -3,7 +3,7 @@
   {
    "file_name": "./blackjack/support/testing_util.py",
    "errors": [
-    "blackjack/blackjack.py:87:11: E0001: Parsing failed: 'unterminated string literal (detected at line 87) (blackjack, line 87)' (syntax-error)",
+    "blackjack/blackjack.py:82:11: E0001: Parsing failed: 'unterminated string literal (detected at line 82) (blackjack, line 82)' (syntax-error)",
     "tdd/test_generate_card.py:11:0: C0301: Line too long (164/150) (line-too-long)",
     "tdd/test_generate_card.py:11:1: W0511: TODO: Write several more tests below using different inputs for the generate_card function. You won't be able to cover them all - but try to cover the main cases. (fixme)",
     "tdd/test_generate_card.py:15:1: W0511: TODO: Write several tests below to test this function (fixme)",

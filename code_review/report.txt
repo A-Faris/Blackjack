@@ -1,7 +1,7 @@
 ./blackjack/support/testing_util.py
 ./blackjack/blackjack.py
 ************* Module blackjack
-blackjack/blackjack.py:87:11: E0001: Parsing failed: 'unterminated string literal (detected at line 87) (blackjack, line 87)' (syntax-error)
+blackjack/blackjack.py:82:11: E0001: Parsing failed: 'unterminated string literal (detected at line 82) (blackjack, line 82)' (syntax-error)
 ./blackjack/test_blackjack_coaches.py
 ./blackjack/test_blackjack_trainees.py
 ./tdd/test_generate_card.py
