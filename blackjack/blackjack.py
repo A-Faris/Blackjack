@@ -33,24 +33,23 @@ def points_for_hand(cards: list[str]) -> int:
 
     # 2 aces and 6 cards gives 21
     aces = ("A♠", "A♦", "A♣", "A♥")
-    if len(cards) > 5 or len(cards) == 2 and cards[0] in aces and cards[1] in aces:
+    if len(cards) > 5 or len(cards) == 2 and all(card in aces for card in cards):
         return MAX_POINT
 
-    point = 0
-    for card in cards:
-        if card[:-1] in ranks and card[-1] in suits:
-            point += points_for_card(card[:-1])
-
-    return point
+    return sum(points_for_card(card) for card in cards)
 
 
-def points_for_card(rank: str) -> int:
+def points_for_card(card: str) -> int:
     """Calculates the value of a card from a deck of cards"""
-    if rank in ("J", "Q", "K"):
-        return 10
-    if rank == "A":
-        return 11
-    return int(rank)
+    if card[-1] in suits:
+        rank = card[:-1]
+        if rank in ("J", "Q", "K"):
+            return 10
+        if rank == "A":
+            return 11
+        if rank in ranks:
+            return int(rank)
+    return 0
 
 
 def get_next_card_from_deck(deck: list[str]) -> str:
