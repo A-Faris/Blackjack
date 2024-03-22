@@ -9,10 +9,11 @@ WIN_MESSAGE = "You win!"
 DRAW_MESSAGE = "Draw!"
 
 MAX_POINT = 21
+DEALER_HITS = 17
 
-suits = ["♠", "♦", "♣", "♥"]
-card_values = ("A", "2", "3", "4", "5", "6", "7",
-               "8", "9", "10", "J", "Q", "K")
+suits = ("♠", "♦", "♣", "♥")
+ranks = ("A", "2", "3", "4", "5", "6", "7",
+         "8", "9", "10", "J", "Q", "K")
 
 
 def shuffle(deck: list, seed: int) -> list[str]:
@@ -22,42 +23,34 @@ def shuffle(deck: list, seed: int) -> list[str]:
     return copy_of_deck
 
 
-def generate_deck() -> list[str]:
+def generate_deck(number_of_decks: int = 1) -> list[str]:
     """Generates a deck of cards and returns them"""
-    cards = []
-    for suit in suits:
-        for value in card_values:
-            cards.append(value + suit)
-    return cards
+    for i in range(number_of_decks):
+        return [rank + suit for suit in suits for rank in ranks]
 
 
 def points_for_hand(cards: list[str]) -> int:
     """Calculates the amount of points for a given list of cards"""
-    if len(cards) > 5:
+
+    # 2 aces and 6 cards gives 21
+    if len(cards) > 5 or len(cards) == 2 and cards[0] and cards[1] in ["A♠", "A♦", "A♣", "A♥"]:
         return MAX_POINT
 
     point = 0
     for card in cards:
-        if len(card) < 4 and card[-1] in suits:
+        if card[:-1] in ranks and card[-1] in suits:
             point += points_for_card(card[:-1])
-        else:
-            return 0
-
-    if len(cards) == 2 and cards[0][0] == "A" and cards[1][0] == "A":
-        return MAX_POINT
 
     return point
 
 
-def points_for_card(card_value: str) -> int:
+def points_for_card(rank: str) -> int:
     """Calculates the value of a card from a deck of cards"""
-    if card_value in ("J", "Q", "K"):
+    if rank in ("J", "Q", "K"):
         return 10
-    if card_value == "A":
+    if rank == "A":
         return 11
-    if card_value in card_values:
-        return int(card_value)
-    return 0
+    return int(rank)
 
 
 def get_next_card_from_deck(deck: list[str]) -> str:
@@ -76,11 +69,7 @@ def player_turn(deck: list[str], hand: list[str]) -> bool:
 
     print(f"Your hand is {', '.join(hand)} ({points_for_hand(hand)} points)")
 
-    if points_for_hand(hand) == MAX_POINT:  # Player wins
-        return False
-
-    if points_for_hand(hand) > MAX_POINT:  # Dealer Wins
-        print(LOSE_MESSAGE)
+    if points_for_hand(hand) >= MAX_POINT:  # Player busts or gets 21, end turn
         return False
 
     action = input('What do you want to do? ("hit" or "stick") ')
@@ -90,10 +79,7 @@ def player_turn(deck: list[str], hand: list[str]) -> bool:
         print(f"Hitting\nYou draw {hand[-1]}")
         return True
 
-    if action == "stick":
-        return False  # End the player's turn
-
-    return None
+    return False  # Stick so player's turn end
 
 
 def dealer_turn(deck: list[str], hand: list[str]) -> bool:
@@ -102,11 +88,7 @@ def dealer_turn(deck: list[str], hand: list[str]) -> bool:
     print(f"Dealer's hand is {', '.join(hand)} ({
         points_for_hand(hand)} points)")
 
-    if points_for_hand(hand) > MAX_POINT:  # Player wins
-        print(WIN_MESSAGE)
-        return False
-
-    if points_for_hand(hand) < 17:  # Hit
+    if points_for_hand(hand) < DEALER_HITS:  # Hit
         hand = deal_card_to_hand(deck, hand)
         print(f"Dealer draws {hand[-1]}")
         return True
@@ -124,6 +106,7 @@ def play(seed: int) -> None:
     new_deck = generate_deck()
     deck = shuffle(new_deck, seed)
 
+    # Player's turn
     player_hand = [deck.pop(0), deck.pop(0)]
 
     is_player_turn = True
@@ -131,20 +114,34 @@ def play(seed: int) -> None:
     while is_player_turn:
         is_player_turn = player_turn(deck, player_hand)
 
+    if points_for_hand(player_hand) > MAX_POINT:  # Player busts
+        print(LOSE_MESSAGE)
+        return
+
+    # Dealer's turn
     dealer_hand = [deck.pop(0), deck.pop(0)]
 
-    is_dealer_turn = points_for_hand(player_hand) <= MAX_POINT
+    is_dealer_turn = True
 
     while is_dealer_turn:
         is_dealer_turn = dealer_turn(deck, dealer_hand)
 
-    if points_for_hand(dealer_hand) <= MAX_POINT:
-        if points_for_hand(dealer_hand) > points_for_hand(player_hand):
-            print(LOSE_MESSAGE)
-        elif points_for_hand(player_hand) > points_for_hand(dealer_hand):
-            print(WIN_MESSAGE)
-        else:
-            print(DRAW_MESSAGE)
+    # Scoring
+    if points_for_hand(dealer_hand) > MAX_POINT:  # Dealer busts
+        print(WIN_MESSAGE)
+        return
+
+    # Dealer has more points than Player, you lose
+    if points_for_hand(dealer_hand) > points_for_hand(player_hand):
+        print(LOSE_MESSAGE)
+        return
+
+    # Player has more points than Dealer, you win
+    if points_for_hand(player_hand) > points_for_hand(dealer_hand):
+        print(WIN_MESSAGE)
+        return
+
+    print(DRAW_MESSAGE)
 
 
 def get_seed() -> int:
