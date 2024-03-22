@@ -10,7 +10,7 @@ DRAW_MESSAGE = "Draw!"
 
 MAX_POINT = 21
 
-suits = ("S", "D", "C", "H")
+suits = ["♠", "♦", "♣", "♥"]
 card_values = ("A", "2", "3", "4", "5", "6", "7",
                "8", "9", "10", "J", "Q", "K")
 
@@ -39,7 +39,7 @@ def points_for_hand(cards: list[str]) -> int:
     point = 0
     for card in cards:
         if len(card) < 4 and card[-1] in suits:
-            point += points_for_card(card)
+            point += points_for_card(card[:-1])
         else:
             return 0
 
@@ -49,16 +49,14 @@ def points_for_hand(cards: list[str]) -> int:
     return point
 
 
-def points_for_card(card: str) -> int:
+def points_for_card(card_value: str) -> int:
     """Calculates the value of a card from a deck of cards"""
-    if card[0] in ("J", "Q", "K"):
+    if card_value in ("J", "Q", "K"):
         return 10
-    if card[0] == "A":
+    if card_value == "A":
         return 11
-    if card[0] in card_values:
-        return int(card[0])
-    if card[:2] == "10":
-        return 10
+    if card_value in card_values:
+        return int(card_value)
     return 0
 
 
@@ -133,21 +131,20 @@ def play(seed: int) -> None:
     while is_player_turn:
         is_player_turn = player_turn(deck, player_hand)
 
-    if points_for_hand(player_hand) <= MAX_POINT:
-        dealer_hand = [deck.pop(0), deck.pop(0)]
+    dealer_hand = [deck.pop(0), deck.pop(0)]
 
-        is_dealer_turn = True
+    is_dealer_turn = points_for_hand(player_hand) <= MAX_POINT
 
-        while is_dealer_turn:
-            is_dealer_turn = dealer_turn(deck, dealer_hand)
+    while is_dealer_turn:
+        is_dealer_turn = dealer_turn(deck, dealer_hand)
 
-        if points_for_hand(dealer_hand) <= MAX_POINT:
-            if points_for_hand(dealer_hand) > points_for_hand(player_hand):
-                print(LOSE_MESSAGE)
-            elif points_for_hand(player_hand) > points_for_hand(dealer_hand):
-                print(WIN_MESSAGE)
-            else:
-                print(DRAW_MESSAGE)
+    if points_for_hand(dealer_hand) <= MAX_POINT:
+        if points_for_hand(dealer_hand) > points_for_hand(player_hand):
+            print(LOSE_MESSAGE)
+        elif points_for_hand(player_hand) > points_for_hand(dealer_hand):
+            print(WIN_MESSAGE)
+        else:
+            print(DRAW_MESSAGE)
 
 
 def get_seed() -> int:

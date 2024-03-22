@@ -12,58 +12,58 @@ Testing Generate Deck
 
 def test_generate_deck():
     completeDeck = [
-        'AS',
-        '2S',
-        '3S',
-        '4S',
-        '5S',
-        '6S',
-        '7S',
-        '8S',
-        '9S',
-        '10S',
-        'JS',
-        'QS',
-        'KS',
-        'AD',
-        '2D',
-        '3D',
-        '4D',
-        '5D',
-        '6D',
-        '7D',
-        '8D',
-        '9D',
-        '10D',
-        'JD',
-        'QD',
-        'KD',
-        'AC',
-        '2C',
-        '3C',
-        '4C',
-        '5C',
-        '6C',
-        '7C',
-        '8C',
-        '9C',
-        '10C',
-        'JC',
-        'QC',
-        'KC',
-        'AH',
-        '2H',
-        '3H',
-        '4H',
-        '5H',
-        '6H',
-        '7H',
-        '8H',
-        '9H',
-        '10H',
-        'JH',
-        'QH',
-        'KH'
+        'A♠',
+        '2♠',
+        '3♠',
+        '4♠',
+        '5♠',
+        '6♠',
+        '7♠',
+        '8♠',
+        '9♠',
+        '10♠',
+        'J♠',
+        'Q♠',
+        'K♠',
+        'A♦',
+        '2♦',
+        '3♦',
+        '4♦',
+        '5♦',
+        '6♦',
+        '7♦',
+        '8♦',
+        '9♦',
+        '10♦',
+        'J♦',
+        'Q♦',
+        'K♦',
+        'A♣',
+        '2♣',
+        '3♣',
+        '4♣',
+        '5♣',
+        '6♣',
+        '7♣',
+        '8♣',
+        '9♣',
+        '10♣',
+        'J♣',
+        'Q♣',
+        'K♣',
+        'A♥',
+        '2♥',
+        '3♥',
+        '4♥',
+        '5♥',
+        '6♥',
+        '7♥',
+        '8♥',
+        '9♥',
+        '10♥',
+        'J♥',
+        'Q♥',
+        'K♥'
     ]
 
     assert generate_deck() == completeDeck
@@ -83,25 +83,25 @@ def test_points_for_empty():
 def test_points_for_two_cards():
     """points_for_hand() calculates the correct amount of points when only number cards are used"""
 
-    assert points_for_hand(['7H', '2D']) == 9
+    assert points_for_hand(['7♥', '2♦']) == 9
 
 
 def test_points_five_cards():
     """points_for_hand() calculates the correct amount of points when only number and face cards are used"""
 
-    assert points_for_hand(['3D', 'JC', 'QH', '2H', 'AC']) == 36
+    assert points_for_hand(['3♦', 'J♣', 'Q♥', '2♥', 'A♣']) == 36
 
 
 def test_points_two_aces():
     """points_for_hand() calculates the correct amount of points when there are only two aces"""
 
-    assert points_for_hand(['AD', 'AC']) == 21
+    assert points_for_hand(['A♦', 'A♣']) == 21
 
 
 def test_points_two_aces_plus_one():
     """points_for_hand() calculates the correct amount of points when there are two aces and another card"""
 
-    assert points_for_hand(['2D', 'AD', 'AC']) == 24
+    assert points_for_hand(['2♦', 'A♦', 'A♣']) == 24
 
 
 """
@@ -140,7 +140,7 @@ def test_player_choosing_hit_updates_hand(monkeypatch, capsys):
         filter(lambda m: (m.startswith('Your hand is')), printed_lines))
 
     assert printed_lines[1] != None
-    assert "Your hand is 9S, KS, 9H" in printed_lines[1]
+    assert "Your hand is 9♠, K♠, 9♥" in printed_lines[1]
 
 
 def test_player_choosing_hit_updates_points(monkeypatch, capsys):

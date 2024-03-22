@@ -1,3 +1,5 @@
+# pylint: skip-file
+
 """File for tests written by you - the trainee"""
 
 from blackjack import generate_deck, points_for_hand, play, get_next_card_from_deck, deal_card_to_hand
@@ -5,23 +7,23 @@ from support.testing_util import player_chooses
 
 
 def test_points_for_hand():
-    assert points_for_hand(['4S', '5D']) == 9
+    assert points_for_hand(['4♠', '5♦']) == 9
 
 
 def test_points_for_hand_ten():
-    assert points_for_hand(['10S', '10D']) == 20
+    assert points_for_hand(['10♠', '10♦']) == 20
 
 
 def test_points_for_hand_letters():
-    assert points_for_hand(['AS', 'KD']) == 21
+    assert points_for_hand(['A♠', 'K♦']) == 21
 
 
 def test_points_for_hand_two_aces():
-    assert points_for_hand(['AH', 'AC']) == 21
+    assert points_for_hand(['A♥', 'A♣']) == 21
 
 
 def test_points_for_hand_six_cards():
-    assert points_for_hand(['5C', '2S', '3D', '4C', '2C', '3S']) == 21
+    assert points_for_hand(['5♣', '2♠', '3♦', '4♣', '2♣', '3♠']) == 21
 
 
 def test_points_for_hand_invalid_suits():
@@ -29,19 +31,19 @@ def test_points_for_hand_invalid_suits():
 
 
 def test_points_for_hand_other_point_letters():
-    assert points_for_hand(['WC', 'XS']) == 0
+    assert points_for_hand(['W♣', 'X♠']) == 0
 
 
 def test_points_for_hand_other_numbers():
-    assert points_for_hand(['13C', '18S']) == 0
+    assert points_for_hand(['13♣', '18♠']) == 0
 
 
 def test_get_next_card_from_deck():
-    assert get_next_card_from_deck(["2H", "3H"]) == "2H"
+    assert get_next_card_from_deck(["2♥", "3♥"]) == "2♥"
 
 
 def test_deal_card_to_hand():
-    assert deal_card_to_hand(["2H", "3H"], ["4D", "KS"]) == ["4D", "KS", "2H"]
+    assert deal_card_to_hand(["2♥", "3♥"], ["4♦", "K♠"]) == ["4♦", "K♠", "2♥"]
 
 
 def test_dealer_loses_when_bust(monkeypatch, capsys):
