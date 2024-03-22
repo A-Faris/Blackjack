@@ -12,8 +12,7 @@ MAX_POINT = 21
 DEALER_HITS = 17
 
 suits = ("♠", "♦", "♣", "♥")
-ranks = ("A", "2", "3", "4", "5", "6", "7",
-         "8", "9", "10", "J", "Q", "K")
+ranks = ("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K")
 
 
 def shuffle(deck: list, seed: int) -> list[str]:
@@ -33,7 +32,8 @@ def points_for_hand(cards: list[str]) -> int:
     """Calculates the amount of points for a given list of cards"""
 
     # 2 aces and 6 cards gives 21
-    if len(cards) > 5 or len(cards) == 2 and cards[0] and cards[1] in ["A♠", "A♦", "A♣", "A♥"]:
+    aces = ("A♠", "A♦", "A♣", "A♥")
+    if len(cards) > 5 or len(cards) == 2 and cards[0] in aces and cards[1] in aces:
         return MAX_POINT
 
     point = 0
@@ -88,12 +88,12 @@ def dealer_turn(deck: list[str], hand: list[str]) -> bool:
     print(f"Dealer's hand is {', '.join(hand)} ({
         points_for_hand(hand)} points)")
 
-    if points_for_hand(hand) < DEALER_HITS:  # Hit
+    if points_for_hand(hand) < DEALER_HITS:  # Dealer's hit condition
         hand = deal_card_to_hand(deck, hand)
         print(f"Dealer draws {hand[-1]}")
         return True
 
-    return False
+    return False  # Stick so dealer's turn ends
 
 
 def play(seed: int) -> None:
