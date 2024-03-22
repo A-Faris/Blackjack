@@ -1,35 +1,9 @@
 ./blackjack/support/testing_util.py
 ./blackjack/blackjack.py
 ************* Module blackjack
-blackjack/blackjack.py:104:11: E0001: Parsing failed: 'unterminated string literal (detected at line 104) (blackjack, line 104)' (syntax-error)
+blackjack/blackjack.py:102:11: E0001: Parsing failed: 'unterminated string literal (detected at line 102) (blackjack, line 102)' (syntax-error)
 ./blackjack/test_blackjack_coaches.py
 ./blackjack/test_blackjack_trainees.py
-************* Module test_blackjack_trainees
-blackjack/test_blackjack_trainees.py:3:0: E0001: Cannot import 'blackjack' due to 'unterminated string literal (detected at line 104) (blackjack, line 104)' (syntax-error)
-blackjack/test_blackjack_trainees.py:91:11: R1726: Boolean condition "'Your hand is' and "Dealer's hand is" in captured_output" may be simplified to ""Dealer's hand is" in captured_output" (simplifiable-condition)
-blackjack/test_blackjack_trainees.py:115:4: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
-blackjack/test_blackjack_trainees.py:7:0: W0612: Unused variable 'test_points_for_hand' (unused-variable)
-blackjack/test_blackjack_trainees.py:11:0: W0612: Unused variable 'test_points_for_hand_ten' (unused-variable)
-blackjack/test_blackjack_trainees.py:15:0: W0612: Unused variable 'test_points_for_hand_letters' (unused-variable)
-blackjack/test_blackjack_trainees.py:19:0: W0612: Unused variable 'test_points_for_hand_two_aces' (unused-variable)
-blackjack/test_blackjack_trainees.py:23:0: W0612: Unused variable 'test_points_for_hand_six_cards' (unused-variable)
-blackjack/test_blackjack_trainees.py:27:0: W0612: Unused variable 'test_points_for_hand_invalid_suits' (unused-variable)
-blackjack/test_blackjack_trainees.py:31:0: W0612: Unused variable 'test_points_for_hand_other_point_letters' (unused-variable)
-blackjack/test_blackjack_trainees.py:35:0: W0612: Unused variable 'test_points_for_hand_other_numbers' (unused-variable)
-blackjack/test_blackjack_trainees.py:39:0: W0612: Unused variable 'test_get_next_card_from_deck' (unused-variable)
-blackjack/test_blackjack_trainees.py:43:0: W0612: Unused variable 'test_deal_card_to_hand' (unused-variable)
-blackjack/test_blackjack_trainees.py:47:0: W0612: Unused variable 'test_dealer_loses_when_bust' (unused-variable)
-blackjack/test_blackjack_trainees.py:59:0: W0612: Unused variable 'test_player_wins_with_higher_score' (unused-variable)
-blackjack/test_blackjack_trainees.py:71:0: W0612: Unused variable 'test_player_loses_with_lower_score' (unused-variable)
-blackjack/test_blackjack_trainees.py:83:0: W0612: Unused variable 'test_player_and_dealer_take_turns' (unused-variable)
-blackjack/test_blackjack_trainees.py:94:0: W0612: Unused variable 'test_same_score_draw' (unused-variable)
-blackjack/test_blackjack_trainees.py:106:0: W0612: Unused variable 'test_dealer_hits_below_seventeen' (unused-variable)
-blackjack/test_blackjack_trainees.py:3:0: W0612: Unused variable 'generate_deck' (unused-variable)
-blackjack/test_blackjack_trainees.py:3:0: W0611: Unused generate_deck imported from blackjack (unused-import)
-
------------------------------------
-Your code has been rated at 5.76/10
-
 ./tdd/test_generate_card.py
 ************* Module test_generate_card
 tdd/test_generate_card.py:11:0: C0301: Line too long (164/150) (line-too-long)
