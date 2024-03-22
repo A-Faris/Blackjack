@@ -12,7 +12,8 @@ MAX_POINT = 21
 DEALER_HITS = 17
 
 suits = ("♠", "♦", "♣", "♥")
-ranks = ("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K")
+ranks = {"A": 11, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6,
+         "7": 7, "8": 8, "9": 9, "10": 10, "J": 10, "Q": 10, "K": 10}
 
 
 def shuffle(deck: list, seed: int) -> list[str]:
@@ -42,13 +43,7 @@ def points_for_hand(cards: list[str]) -> int:
 def points_for_card(card: str) -> int:
     """Calculates the value of a card from a deck of cards"""
     if card[-1] in suits:
-        rank = card[:-1]
-        if rank in ("J", "Q", "K"):
-            return 10
-        if rank == "A":
-            return 11
-        if rank in ranks:
-            return int(rank)
+        return ranks.get(card[:-1], 0)
     return 0
 
 
