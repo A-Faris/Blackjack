@@ -1,7 +1,5 @@
 # Blackjack
 
-![fullwidth The logic of a Blackjack game](./assets/logic.png)
-
 ## Project Specification
 
 - Generate a deck of cards
@@ -27,6 +25,10 @@ Dealer's hand is 3H, 4D, 8C, 5S
 (20 points)
 You lose!
 ```
+
+## Game Logic
+
+![fullwidth The logic of a Blackjack game](./assets/logic.png)
 
 ## The Game
 
