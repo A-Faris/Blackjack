@@ -25,8 +25,8 @@ def shuffle(deck: list, seed: int) -> list[str]:
 
 def generate_deck(number_of_decks: int = 1) -> list[str]:
     """Generates a deck of cards and returns them"""
-    for i in range(number_of_decks):
-        return [rank + suit for suit in suits for rank in ranks]
+    return [rank + suit for suit in suits for rank in ranks
+            for _ in range(number_of_decks)]
 
 
 def points_for_hand(cards: list[str]) -> int:
